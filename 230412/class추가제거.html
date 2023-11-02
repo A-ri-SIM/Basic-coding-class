@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background: blueviolet;
+            font-size: 20px;
+        }
+        .on{
+            background: red;
+            height: 600px;
+            font-size: 100px;
+        }
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            //$(".box").addClass("on");
+            //$(".box").removeClass("box");
+            // =>우선순위 꼭 확인하기
+            $(".box").hover(function(){
+                $(this).addClass("on",500);
+            },function(){
+                $(this).removeClass("on",500);
+            });
+        });//끝
+    </script>
+</head>
+<body>
+    <div class="box">1</div>
+</body>
+</html>

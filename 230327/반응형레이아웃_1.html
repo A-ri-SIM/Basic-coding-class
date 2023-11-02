@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .out_box{
+            /* 1.부모고정크기px */
+            /* width: 800px; */
+            /* height: 400px; */
+            /* 2.부모유동크기값% */
+            /* width: 50%; */
+            /* 800/1920=0.41666...7*100-41.6(42%) */
+            /* height: 400px; */
+            /* 3.부모뮤동크기값vw,vh */
+            width: 40vw;
+            height: 50vh;
+            background: aquamarine;
+        }
+        .in_box{
+            /* 1.부모고정크기px */
+            /* 1-1. 부모고정(px) 자식고정(px) */
+            /* width: 200px; */
+            /* 부모가로크기/자식갯수=200 */
+            /* height: 400px; */
+            /* 1-2. 부모고정(px) 자식유동(%) */
+            /* width: 25%; */
+            /* 100%/4=25% */
+            /* height: 100%; */
+            /* 1-3 부모고정(px) 자식유동(vw,vh) */
+            /* width: 25vw; */
+            /* height: 100vh; */
+            /* width: 10.41vw; */
+            /* 800/1920=0.41666...7*100-41.6(42vw)
+            200/1920=0.1041666..*100=10.41(10.41vw) */
+            /* height: 400px; */
+            /* 2.부모유동크기값% */
+            /* 2-1. 부모유동(%) 자식고정(px) */
+            /* width: 200px;
+            height: 400px; */
+            /* 2-2. 부모유동(%) 자식유동(%) */
+            /* width: 25%; */
+            /* height: 100%; */
+            /* 2-3 부모유동(%) 자식유동(vw,vh) */
+            /* 3.부모유동크기값vw,vh */
+            /* 3-1. 부모유동(vw,vh) 자식고정(px) */
+            /* 3-2. 부모유동(vw,vh) 자식유동(%) */
+            width: 25%;
+            height: 100%;
+            /* 3-3 부모유동(vw,vh) 자식유동(vw,vh) */
+            background: red;
+            border: 5px solid black;
+            box-sizing: border-box;
+            float: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="out_box">
+        <div class="in_box">1</div>
+        <div class="in_box">2</div>
+        <div class="in_box">3</div>
+        <div class="in_box">4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p{ */
+            /* font-family: 'Courier New', Courier, monospace; */
+            /* =>글씨체 속성 */
+            /* font-size: ;
+            =>글씨크기
+            =>px 해상도에 따른 크기값
+            -기기의 해상도에 따라 다르게 보일수있음
+            -기본값 16px(12pt)
+            =>% 부모요소의 글자 크기를 100%로 기준계산
+            -16px => 100%
+            =>em 부모요소의 글자 크기를 100%로 기준계산
+                100분의1 단위
+                =>배수값
+                =>16px => 100% => 1em */
+            /* rem단위
+            =>r:root 기준 최상위 요소를 기준으로 계산
+            =>html 요소에서 지정한 요소를 기준으로 함 */
+        /* } */
+        /* html{
+            font-size: 16px;
+        }
+        ul{
+            font-size: 32px;
+        }
+        li:first-child{
+            font-size: 32px;
+        }
+        li:nth-child(2){
+            font-size: 200%;
+        }
+        li:nth-child(3){
+            font-size: 2em;
+        }
+        li:last-child{
+            font-size: 2rem;
+        } */
+        /* li:first-child{
+            font-size: 10vw;
+        }
+        li:nth-child(2){
+            font-size: 10vh;
+        } */
+        /* li{
+            font-weight: bold;
+        } */
+        li{
+            width: 300px;
+            height: 100px;
+            background: lightpink;
+            margin-bottom: 10px;
+            font-size: 30px;
+            font-weight: 900;
+        }
+        li:first-child{
+            font-weight: bold;
+            font-style: normal;
+            /* font-variant: normal; */
+            /* =>소문자를 대문자로 변경 기본값 소문자 */
+            letter-spacing: 10px;
+            /* =>텍스트 간격 */
+            text-transform: uppercase;
+            /* =>텍스트의 대문자 변경 */
+            text-shadow: 10px 0 5px black;
+            /* =>텍스트 그림자 */
+            /* =>x축, y축 퍼지는값 색상값 */
+        }
+        li:nth-child(2){
+            font-weight: 900;
+            font-style: italic;
+            /* font-variant: small-caps; */
+             /* =>소문자를 대문자로 변경 */
+             /* letter-spacing: -10px; */
+             text-shadow: 0px 10px 20px black;
+
+             
+        }
+        li:nth-child(3){
+            font-weight: bolder;
+            font-style: oblique;
+            /* font-variant: small-caps; */
+            word-spacing: 50px;
+            /* =>단어 사이 간격 */
+            text-transform: capitalize;
+            /* =>텍스트의 첫번째 글자만 대문자 변경 */
+        }
+        li:nth-child(4){
+            /* font-variant: small-caps; */
+            font: bold 12px  '굴림';
+            /* font: 두께값, 스타일,크기,폰트명; */
+            text-transform: lowercase;
+            /* =>텍스트의 소문자 변경 */
+
+        }
+    </style>
+</head>
+<body>
+    <!-- <p>
+        abcdefghijklmnopqrstuvwxyz
+    </p> -->
+
+    <ul>
+        <li>px기준</li>
+        <li>부모기준 % abc</li>
+        <li>부모기준 em</li>
+        <li>최상위기준 rem ABC</li>
+    </ul>
+</body>
+</html>

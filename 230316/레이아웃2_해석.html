@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #warp{
+            width: 1200px;
+            height: 900px;
+            border: 10px solid black;
+            margin: 0 auto;
+        }
+        .con_box{
+            width: 1100px;
+            border: 10px solid blue;
+            box-sizing: border-box;
+           
+            margin: 50px auto;
+
+
+        }
+         .con_box:first-child{
+            height: 150px;
+            padding: 50px;
+            /* =>부모에게 패딩을 지정하여 자식과의 사이 여백지정
+            =>부모의 크기 설정 확인 (box-sizing) */
+          
+        }
+
+        .con_box:nth-child(2){
+            height: 350px;
+            padding: 25px;
+        }
+        
+        .con_box:last-child{
+            height: 200px;
+        }
+        /* 첫번째 con_box 안 자식 영역 */
+        #in_box_1{
+            width: 980px;
+            /* (1100-20=1080-100(여백값)=980) */
+            height: 30px;
+            background: red;
+            /* margin: 30px auto; */
+            /* => margin: 은 객체와 객체 사이 여백
+            => 부모와 자식 사이 여백 : 자식에게 삽입한다 */
+        }
+        .in_box_2{
+            /* (1100-20(여백값)=1080-80(여백값))=1000/2=500(박스사이즈)) */
+            width: 500px;
+            /* (350-20(여백값)=330-80(여백값)=250/2=125(박스사이즈)) */
+            height: 125px;
+            background: rebeccapurple;
+            /* 1.margin으로 여백값 지정 위치 설정
+            2.가로 정렬 활용
+            -부모가 있는 경우
+            =>세로 설정
+            =>가로 설정
+            -부모가 없는 경우
+            =>float값 활용 
+            =>가로정렬시 부모 값을 넘으면 줄바꿈*/
+            float: left;
+            }
+            .in_box_2:first-child{
+                /* margin-top: 25px;
+                margin-left: 25px;
+                margin-right: 30px; */
+                margin-right: 30px;
+                margin-bottom: 30px;
+            }
+            .in_box_2:nth-child(2){
+                /* margin-top: 25px; */
+            }
+            .in_box_2:nth-child(3){
+                /* margin-top: 30px;
+                margin-left: 25px;
+                margin-right: 30px; */
+                margin-right: 30px;
+            }
+            .in_box_2:nth-child(4){
+                /* margin-top: 30px; */
+            }
+            .in_box_3{
+                width: 300px;
+                height: 30px;
+                background: gold;
+                margin: 20px auto;
+            }
+            .in_box_3:last-child{
+                width: 600px;
+                margin-top: 40px;
+            }
+
+
+    </style>
+</head>
+<body>
+    <div id="warp">
+    <div class="con_box">
+        <div id="in_box_1"></div>
+    </div>
+    <div class="con_box">
+            <div class="in_box_2"></div>
+            <div class="in_box_2"></div>
+            <div class="in_box_2"></div>
+            <div class="in_box_2"></div>
+    </div>
+    <div class="con_box">
+        <div class="in_box_3"></div>
+        <div class="in_box_3"></div>
+    </div>
+ </div>  
+
+
+
+
+</body>
+</html>

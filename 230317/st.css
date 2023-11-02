@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 헤더영역 */
+header{
+    width: 1920px;
+    height: 1200px;
+    background: navajowhite;
+    margin: 0 auto;
+    position: relative;
+}
+/* top_header영역 */
+.top_header{
+    width: 1300px;
+    height: 100px;
+    background: lightskyblue;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+/* 로고영역 */
+.header_logo{
+    width: 250px;
+    height: 100px;
+    background: lemonchiffon;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* 서치메뉴영역 */
+.search_menu{
+    width: 350px;
+    height: 70px;
+    background: lightcoral;
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+/* 슬라이드영역 */
+.slide{
+    width: 1920px;
+    height: 600px;
+    background: lightgreen;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+/* 커뮤니티영역 */
+.community,.shopping{
+    width: 950px;
+    height: 400px;
+    background: rgb(170, 13, 233);
+    position: absolute;
+    top: 620px;
+    left: 0;
+}
+/* 쇼핑영역 */
+.shopping{
+    top: 620px;
+    left: 970px;
+}
+/* 이벤트배너영역 */
+.event_banner{
+    width: 1920px;
+    height: 150px;
+    background: lightblue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/* 섹션영역 */
+section{
+    width: 1440px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: lightyellow;
+}
+/* article영역 */
+.out_box{
+    width: 1440px;
+    height: 600px;
+    background: lawngreen;
+    margin-bottom: 100px ;
+    position: relative;
+}
+/* 인기상품영역 */
+.box_best{
+    margin-top: 30px;
+}
+.text_box{
+    width: 1440px;
+    height: 50px;
+    background: lightslategray;
+}
+.in_box{
+    width: 400px;
+    height: 500px;
+    background: green;
+    float: left;
+}
+.con_1{
+    float: left;
+    margin: 0 110px;
+}
+.con_2{
+    float: right;
+}
+.in_box_1{
+    width: 300px;
+    height: 400px;
+    background: green;
+    float: left;
+    margin-right: 80px;
+}
+.review_4{
+    margin-right:0;
+}
+.box_review{
+    margin-bottom: 30px;
+}
+/* footer영역 */
+footer{
+    width: 1920px;
+    height: 200px;
+    background: grey;
+    margin: 0 auto;
+}

@@ -1,0 +1,89 @@
+/* 1280이상일때 */
+@media all and (min-width:1280px){
+    
+   *{
+    margin: 0;
+    padding: 0;
+    transition-duration: 0.5s;
+   }
+    #wrap{
+        /* width: 1280px; */
+        width: 80%;
+        /* width: 67%; */
+        /* 1280/1920=0.666..*100=66.666... */
+        overflow: hidden;
+        margin: 0 auto;
+        background: lightgreen;
+    }
+    header{
+        width: 100%;
+        height: 100px;
+        background: orange;
+        margin-bottom: 30px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .main_logo{
+        /* width: 200px; */
+        width: 15.625%;
+        /* 200/1280= 0.15625*100=15.625 */
+        height: 80px;
+        float: left;
+        background: red;
+    }
+    #mo_main_menu,.toggle_menu_wrap{
+        display: none;
+    }
+    .main_menu_wrap{
+        /* width: 960px; */
+        width: 75%;
+        height: 80px;
+        background: seagreen;
+        float: right;
+    }
+    .out_box{
+        /* width: 1280px; */
+        width: 100%;
+        height: 150px;
+        background: aqua;
+        margin-bottom: 30px;
+    }
+    .main_banner_wrap{
+        height: 500px;
+        background: yellow;
+    }
+    .in_box{
+        height: 150px;
+        background: blue;
+        float: left;
+        margin-right: 0.5%;
+    }
+    .in_box:last-child{
+        margin-right: 0;
+    }
+    .f_con{
+        /* width: 420px; */
+        width: 33%;
+        /* 고정 여백값
+        1280-20=1260/3=420
+        420/1280=0.328125*100=32.8125 */
+        /* 유동여백값
+        10/1280=0.0078125*100=0.78125
+        100%-1.5625%=98.4374%/3=32.81246% */
+    }
+    .b_con{
+        /* width: 205px; */
+        width: 16.25%;
+        /* 고정 여백값
+        1280-50=1230/6=205
+        205/1280=0.16015625*100=16.01 */
+    }
+
+    footer{
+        width: 100%;
+        height: 100px;
+        background: hotpink;
+    }
+
+
+ }/*닫히는영역 지우지 않기 */

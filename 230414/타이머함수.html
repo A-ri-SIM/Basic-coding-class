@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 1.일정 시간 이후 한번만 실행
+            // setTimeout(function(){
+            //     alert("한번");
+            // },1000);
+            // 2.일정시간 간격 계속 실행
+            // setInterval(function(){
+            //     //alert("계속");
+            //     document.write("빵");
+            // },1000);
+
+            // 강제 이벤트
+            // =>사용자가 이벤트를 발생 시키는것처럼 보이게 하는 것
+            // =>사용전 이벤트가 정의되어져 있어야 사용가능
+            // trigger()
+            // =>$(선택자).trigger(이벤트명);
+
+            // 버튼을 클릭하면 "=>" 문서에 삽입하기
+            // 1초에 한번씩 자동으로 버튼을 클릭해서 문서에 삽입되도록
+           
+            $(".but").click(function(){
+                $(".box").append("=>")
+               
+            })
+           
+            setInterval(function(){
+                    // document.write("=>")
+                    $(".but").trigger("click");
+                },1000);
+
+        });//끝
+    </script>
+</head>
+<body>
+    <div class="but">◎</div>
+    <div class="box"></div>
+</body>
+</html>

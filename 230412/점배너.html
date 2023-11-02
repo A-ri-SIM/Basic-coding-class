@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .mask{
+            width: 800px;
+            height: 500px;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+        }
+        .move_box{
+            width: 4000px;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .box{
+            width: 800px;
+            height: 500px;
+            float: left;
+            text-align: center;
+            font-size: 100px;
+            line-height: 500px;
+        }
+        .toggle_box{
+            width: 240px;
+            height: 50px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -120px;
+            z-index: 999999;
+        }
+        .toggle{
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 20px;
+            background: black;
+            float: left;
+        }
+        .toggle:last-child{
+            margin-right: 0;
+        }
+        .on{
+            background: white;
+            color: black;
+        }
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            let bg=["red","blue","yellow","green","plum"];
+            $(".box").css({
+                background:function(index){
+                    return bg[index]
+                }
+            });
+            
+            
+            $(".toggle").click(function(){
+                let toggle_index=$(this).index();
+                $(".toggle").removeClass("on");
+                $(this).addClass("on");
+                $(".move_box").animate({
+                    left:-toggle_index*800
+                },500);
+            })// .hover(function(){
+            //     $(this).addClass("on");
+            // },function(){
+            //     $(this).removeClass("on");
+            // })
+            
+            
+
+            // $(".toggle_01").click(function(){
+            //     $(".move_box").animate({
+            //         left:0
+            //     })
+            // })
+            // $(".toggle_02").click(function(){
+            //     $(".move_box").animate({
+            //         left:-800
+            //     })
+            // })
+            // $(".toggle_03").click(function(){
+            //     $(".move_box").animate({
+            //         left:-1600
+            //     })
+            // })
+            // $(".toggle_04").click(function(){
+            //     $(".move_box").animate({
+            //         left:-2400
+            //     })
+            // })
+            // $(".toggle_05").click(function(){
+            //     $(".move_box").animate({
+            //         left:-3200
+            //     })
+            // })
+
+        });//끝
+    </script>
+</head>
+<body>
+    <div class="mask">
+        <div class="move_box">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+        <div class="toggle_box">
+            <div class="toggle toggle_01">1</div>
+            <div class="toggle toggle_02">2</div>
+            <div class="toggle toggle_03">3</div>
+            <div class="toggle toggle_04">4</div>
+            <div class="toggle toggle_05">5</div>
+        </div>
+    </div>
+    
+</body>
+</html>

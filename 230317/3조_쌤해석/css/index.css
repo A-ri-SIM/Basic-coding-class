@@ -1,0 +1,58 @@
+/* 메인 배너 영역 */
+.slide{
+    width: 1920px;
+    height: 600px;
+    background:navy;
+    margin-bottom: 20px;
+}
+/* 메인 상단 메뉴영역 */
+.top_header{
+    width: 1300px;
+    height: 100px;
+    background: red;
+    margin: 20px auto;
+}
+/* 메인 상단 로고영역 */
+.header_logo{
+    width: 250px;
+    height: 100px;
+    background: yellow;
+}
+/* 메인 상단 검색 메뉴영역 */
+.serch_menu{
+    width: 350px;
+    height: 70px;
+    background:olivedrab;
+    float: right;
+    margin-top: 15px;
+}
+/* 커뮤니티,쇼핑 영역 */
+.community,.shopping{
+    width: 950px;
+    height: 400px;
+    background: salmon;
+}
+.community{
+    margin-right: 20px;
+}
+/* 이벤트 배너영역 */
+.event_banner{
+    width: 1920px;
+    height: 150px;
+    margin-top: 30px;
+    background: lawngreen;
+}
+/* 각 상품 리스트 여백 지정 영역 */
+.box_best,.box_new,.box_cheap,.box_review{
+    margin-top: 30px;
+    margin-bottom: 100px;
+    background: peachpuff;
+}
+/* 마지막 상품 목록 여백 제거 영역 */
+.item_box_400x500:last-child,.item_box_300x400:last-child{
+    margin-right: 0;
+}
+/* 푸터 영역 */
+footer{
+    height: 200px;
+}

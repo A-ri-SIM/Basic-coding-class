@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 id="text"></h1>
+    <button id="but">클릭</button> -->
+
+    <!-- <select id="sel_1" onchange="doChange();">
+        <option value="ko">한국</option>
+        <option value="cn">중국</option>
+        <option value="jp">일본</option>
+    </select> -->
+
+<!-- <input type="text" id="text_1" onfocus="doFocus();"> -->
+<!-- <input type="text" id="text_2" onblur="doBlur(this);"> -->
+<!-- <input type="text" onkeypress="doKey(event);"
+                   onkeydown="doKey(event);"
+                   onkeyup="doKey(event);"> -->
+
+
+<!-- <div style="height: 100px; overflow-y: auto;" onscroll="doScroll(event);">
+    <p>내용</p>
+    <p>내용</p>
+    <p>내용</p>
+    <p>내용</p>
+    <p>내용</p>
+    <p>내용</p>
+    <p>내용</p>
+    <p>내용</p>
+    <p>내용</p>
+    <p>내용</p>
+</div> -->
+
+
+    <script>
+        // function inText(){
+        //     document.getElementById("text").innerText="텍스트삽입";
+        // }
+        // document.getElementById("but").addEventListener("click",inText);
+    
+        // onchange 이벤트
+        // =>select,input의 value값등 변경이 되는 값을 활용하여
+        // 이벤트 발생
+    // function doChange(){
+    //     let sel=document.getElementById("sel_1").value;
+    //     alert(sel);
+
+    // }
+    
+    // focus이벤트
+    // =>input태그의 값 삽입시 
+    // 마우스를 텍스트 박스 위에 위치 할때 발생하는 이벤트
+    // function doFocus(){
+    //     alert("포커스이벤트");
+    // }
+
+    // blur이벤트
+    // =>입력요소에 입력된 값이 정확한 형식 또는 필수값 입력되었는지
+    // 확인(focus 되었다가 빠져 나갈때)
+// function doBlur(obj){
+//     if(obj.value==""){
+//         alert("값이 없어요 필수값입니다. 무조건 입력해주세요");
+//     }
+//     console.log(obj.value);
+// }
+
+// key 이벤트 : 순서값
+// -onkeydown 눌리는
+// -onkeypress 눌려진
+// -onkeyup 눌린후 키올림
+// function doKey(e){
+//     console.log(e.type);
+//     //=>이벤트 이름 출력
+//     console.log(e.target);
+//     //=>이벤트 발생 객체
+//     console.log(e.target.value);
+//     //=>이벤트 발생 시점 입력값
+// }
+
+// function doScroll(e){
+//     alert(e);
+// }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+/* 1.초기화 */
+/* -여백없애기 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* -ul,li 리스트 스타일 */
+ul,li{
+    list-style: none;
+}
+/* -a링크 텍스트 관련 스타일 지정 */
+a{
+    color: #333333;
+    text-decoration: none;
+}
+/* -img 부모의 크기값 맞춤 */
+/* %단위값은 부모 크기값이 100% 기준 */
+img{
+    width: 100%;
+}
+/* 2.클래스 형식으로 통합 스타일 */
+.first_wrap_bg{
+    background: red;
+}
+.sec_wrap_bg{
+    background: lightcoral;
+}
+
+
+
+/* 헤더영역 */
+/* 텍스트
+-텍스트크기지정
+-가로세로정렬
+-굵기설정 */
+/* header스타일 */
+/* 가로1760 */
+/* 세로50 */
+/* 중앙정렬 */
+header{
+    width: 1760px;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+}
+.logo,.main_menu_wrap,.login_menu_wrap,.sc_login_menu{
+    position: absolute;
+    top: 0;
+}
+/* 로고영역 */
+/* logo */
+/* 가로95,세로50
+왼쪽정렬(float,position) */
+.logo{
+    width: 95px;
+    height: 50px;
+    /* 1.float: left 사용
+    => 내가 float이면 내 형제는 모두 float여야지 서로 크기를 인식함 */
+    /* float: left; */
+    /* 2.float지정
+    =>메뉴의 위치값 지정 */
+    /* float: left; */
+    left: 0;
+}
+
+
+/* 메인메뉴영역  */
+/* main_menu_wrap */
+/* 가로800,세로50
+중앙정렬(margin,position) */
+.main_menu_wrap{
+    width: 800px;
+    height: 50px;
+    /* 1.margin 사용
+    =>float가 있는 형제가 있을 때
+    =>뒤에 있는 형제가 튕김
+ */
+    /* margin: 0 auto; */
+    /* position: relative; */
+    /* =>내가 있는 위치 그대로 왼쪽 상단이 0,0기준 */
+    /* position: absolute; */
+    /* =>내가 position: absolute이면 내 부모의 왼쪽 상단점을 0.0인식함
+    =>부모에게 position값 지정 */
+    /* top: 0; */
+    left: 50%;
+    margin-left: -400px;
+}
+/* top_menu영역 */
+.top_menu{
+    width: 200px;
+    height: 50px;
+    /* padding: 0 50px; */
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+}
+.top_menu:hover{
+    background: white;
+}
+.top_menu:hover>a{
+    color: red;
+}
+
+
+/* 로그인메뉴영역 */
+/* login_menu_wrap */
+/* 가로180,세로50
+오른쪽정렬(float,position) */
+.login_menu_wrap,.sc_login_menu{
+    width: 180px;
+    height: 50px;
+    /* float: right; */
+    /* margin-top: -50px; */
+    right: 0;
+}
+.login_menu{
+    width: 60px;
+    height: 50px;
+    float: left;
+    background: greenyellow;
+    font-size: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+.toggle_menu{
+    position: relative;
+}
+#toggle_input{
+    display: none;
+}
+.toggle_label{
+    display: block;
+    width: 60px;
+    height: 50px;
+    background-image: url(img/toggle.png);
+    background-size: 100% 100%;
+    /* =>background-size: 100% 가로 이미지 영역 크기에 맞춤 */
+    /* =>background-size: 100% 100% 가로세로영역 크기에 맞춤 */
+    background-repeat: no-repeat;
+}
+#toggle_con{
+    width: 800px;
+    height: 800px;
+    background: black;
+    position: absolute;
+    top: 50px;
+    left: -800px;
+    display: none;
+    z-index: 999999;
+}
+#toggle_input:checked~#toggle_con{
+    display: block;
+}
+#toggle_input:checked~.toggle_label{
+    background-image: url(img/toggle_h.png);
+}
+/* .login_menu,#to_img{
+    width: 60px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
+    float: left;
+    position: relative;
+}
+#toggle_box{
+    display: none;
+}
+#to_img>img{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    left: 50%;
+    margin-left: -15px; */
+/* } */
+/* 전체메뉴클릭시나오는영역
+
+
+.sc_menu{
+    width: 800px;
+    height: 980px;
+    background: black;
+    color: white;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -800px;
+    z-index: 999999;
+}
+.sc_lo>a{
+    color: white;
+}
+.sc_menu_header{
+    width: 800px;
+    height: 50px;
+    background: black;
+    float: left;
+}
+.sc_login_menu{
+
+}
+
+#toggle_box:checked~.sc_menu{
+    display: block;
+} */
+
+
+
+/* 메인배너영역 */
+/* 가로1920,세로830
+중앙정렬 */
+.main_banner_wrap{
+    width: 1920px;
+    height: 830px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 텍스트영역
+가로600,세로450
+중앙에서 왼쪽으로 200만큼 이동(position)
+세로중앙 */
+.main_banner_text_wrap{
+    width: 600px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -225px;
+    margin-left: -800px;
+    color: white;
+}
+.big_title{
+    font-size: 95px;
+    font-weight: 900;
+    /* background: greenyellow; */
+}
+.con_text{
+    font-size: 20px;
+    /* background: lightblue; */
+    line-height: 30px;
+}
+.con_text:nth-child(3){
+    margin-top: 30px;
+}
+.view_more_but{
+    width: 300px;
+    height: 50px;
+    background: white;
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+
+/* 배너메뉴영역
+가로80,세로400
+중앙에서 오른쪽으로 800만큼 이동(position)
+세로중앙*/
+.main_banner_menu_wrap{
+    width: 80px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: 840px;
+    padding-top: 10px;
+    
+}
+.banner_in_menu{
+    width: 80px;
+    height: 100px;
+    background: white;
+    /* position: relative; */
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+}
+.banner_in_menu:first-child{
+    border-radius: 10px 10px 0 0;
+}
+.banner_in_menu:nth-child(3){
+    border-radius: 0 0 10px 10px;
+}
+.banner_in_menu>img{
+    width: 50%;
+    /* position: absolute;
+    left: 25%; */
+}
+.ico_text{
+    font-size: 12px;
+    text-align: center;
+    line-height: 12px;
+    font-weight: 500;
+    
+}
+.scroll_box{
+    width: 80px;
+    height: 100px;
+    text-align: center;
+}
+.scroll_box>img{
+    width: 80%;  
+    /* position: relative;
+    top: 50px; */
+    margin-top: 50px;
+}
+
+/* 섹션영역 */
+/* 가로1330,세로자식맞춤
+중앙에서 위치설정 왼쪽
+1760크기안에서 사이드영역과 70여백 위치(position)*/
+section{
+    width: 1330px;
+    overflow: hidden;
+    /* position: absolute; */
+    /* top: 980px; */
+    position: relative;
+    top: 100px;
+    left: 50%;
+    margin-left: -880px;
+}
+/* 섹션과 메인 배너 사이 100
+섹션과 푸터사이 여백 100
+article 사이 여백 50 */
+article{
+    width: 1330px;
+    margin-bottom: 50px;
+}
+
+/* 브랜드배너영역 세로 530*/
+.brand_banner_wrap{
+    background-image: url(img/bnr_brand01.jpg);
+    text-align: center;
+    color: white;
+    
+}
+.brand_text{
+
+}
+.brand_01{
+    font-size: 14px;
+    font-weight: 100px;
+}
+.begimil{
+    font-size: 48px;
+    font-weight: 200px;
+}
+
+/* 기업이념영역 세로 530*/
+.brand_banner_wrap,.busines_idea{
+    height: 530px;
+}
+
+/* r&d 활동 영역 세로 420*/
+/* 베지밀 영유아식 세로 420 */
+.rnd_act,.kids_pro{
+    height: 420px;
+}
+
+/* 레시피영역 세로 1260*/
+.racipe_wrap{
+    height: 1260px;
+}
+
+/* 베스트상품영역 세로 960*/
+.best_pro{
+    height: 960px;
+}
+
+/* 제품음용후기영역 세로 620*/
+.pro_memo{
+    height: 620px;
+}
+
+/* 맛잇고건강한레시피영역 세로 780 */
+.good_racipe{
+    height: 780px;
+}
+/* 정보안내영역(웹진+sns+이용안내) 세로 500 */
+.web_info{
+    height: 500px;
+}
+
+
+/* 푸터영역 */
+/* 가로 1920,세로 자식맞춤
+아래여백 200 */
+footer{
+    width: 1920px;
+    overflow: hidden;
+    margin: 100px auto;
+    margin-bottom: 200px;
+}
+
+
+/* 풀메뉴영역 */
+/* 사이트정보영역 */
+/* 가로 1760,세로 300'
+중앙정렬
+세로부모와 50사이여백 */
+.in_footer_wrap{
+    width: 1760px;
+    height: 300px;
+    margin: 50px auto;
+}
+
+/* 사이드영역 */
+/* 가로360,세로900
+-중앙에서 위치 설정 오른쪽으로 가기
+1760크기안에서 섹션영역과 70여백두고 위치
+항상위치고정(position) */
+aside{
+    width: 360px;
+    height: 900px;
+    position: fixed;
+    top: 980px;
+    left: 50%;
+    margin-left: 520px;
+    padding: 30px;
+    box-sizing: border-box
+}
+
+/* 정식품브랜드 */
+/* 전체카테고리 */
+/* 부모와 사이 여백 30
+여백 빼고 가로 
+세로 전체카테고리와 사이 여백 30빼고
+정식품브랜드 전체카테고리 세로크기 동일 */
+.aside_brand_wrap,.aside_all_category{
+    width: 100%;
+    height: 405px;
+}
+.aside_brand_wrap{
+    margin-bottom: 30px;
+
+}

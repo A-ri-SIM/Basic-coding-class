@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            width: 600px;
+            margin: 0 auto;
+        }
+        #canvas{
+            width: 100%;
+            height: 200px;
+            position: relative;
+            perspective: 1500px;
+        }
+        #rotation{
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform-style: preserve-3d;
+            background: lightgreen;
+            animation-name: move_box;
+            animation-duration: 25s;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            
+            
+        }
+        .face{
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: -115px;
+            margin-right: 10px;
+            backface-visibility: hidden; 
+            transform-style: preserve-3d;
+            
+        }
+        .face_1{
+            transform: rotateY(0deg) translateZ(-500px);
+        }
+        .face_2{
+            transform: rotateY(36deg) translateZ(-500px);
+        }
+        .face_3{
+            transform: rotateY(72deg) translateZ(-500px);
+        }
+        .face_4{
+            transform: rotateY(108deg) translateZ(-500px);
+        }
+        .face_5{
+            transform: rotateY(144deg) translateZ(-500px);
+        }
+        .face_6{
+            transform: rotateY(180deg) translateZ(-500px);
+        }
+        .face_7{
+            transform: rotateY(216deg) translateZ(-500px);
+        }
+        .face_8{
+            transform: rotateY(252deg) translateZ(-500px);
+        }
+        .face_9{
+            transform: rotateY(288deg) translateZ(-500px);
+        }
+        .face_10{
+            transform: rotateY(324deg) translateZ(-500px);
+        }
+
+        .cell{
+            width: 230px;
+            height: 150px;
+            margin-bottom: 5px;
+            background: url(http://placehold.it/260x200);
+            background-image: 100% 100%;
+            border: 1px solid black;
+            box-sizing: border-box;
+            transition-duration: 0.5s;
+        }
+        .cell:hover{
+            transform: scale(1.2) translateZ(50px);
+        }
+        @keyframes move_box{
+            from{
+                transform: rotateY(0deg);
+            }
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas">
+        <div id="rotation">
+            
+            <div class="face face_1">
+                <div class="cell">1</div>
+                <div class="cell">1</div>
+                <div class="cell">1</div>
+                <div class="cell">1</div>
+            </div>
+            <div class="face face_2">
+                <div class="cell">2</div>
+                <div class="cell">2</div>
+                <div class="cell">2</div>
+                <div class="cell">2</div>
+            </div>
+            <div class="face face_3">
+                <div class="cell">3</div>
+                <div class="cell">3</div>
+                <div class="cell">3</div>
+                <div class="cell">3</div>
+            </div>
+            <div class="face face_4">
+                <div class="cell">4</div>
+                <div class="cell">4</div>
+                <div class="cell">4</div>
+                <div class="cell">4</div>
+            </div>
+            <div class="face face_5">
+                <div class="cell">5</div>
+                <div class="cell">5</div>
+                <div class="cell">5</div>
+                <div class="cell">5</div>
+            </div>
+            <div class="face face_6">
+                <div class="cell">6</div>
+                <div class="cell">6</div>
+                <div class="cell">6</div>
+                <div class="cell">6</div>
+            </div>
+            <div class="face face_7">
+                <div class="cell">7</div>
+                <div class="cell">7</div>
+                <div class="cell">7</div>
+                <div class="cell">7</div>
+            </div>
+            <div class="face face_8">
+                <div class="cell">8</div>
+                <div class="cell">8</div>
+                <div class="cell">8</div>
+                <div class="cell">8</div>
+            </div>
+            <div class="face face_9">
+                <div class="cell">9</div>
+                <div class="cell">9</div>
+                <div class="cell">9</div>
+                <div class="cell">9</div>
+            </div>
+            <div class="face face_10">
+                <div class="cell">10</div>
+                <div class="cell">10</div>
+                <div class="cell">10</div>
+                <div class="cell">10</div>
+            </div>
+        
+        </div>
+    </div>
+</body>
+</html>

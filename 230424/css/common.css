@@ -1,0 +1,24 @@
+/* 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333333;
+}
+img{
+    width: 100%;
+}
+.width_align{
+    width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.float_left{
+    float: left;
+}

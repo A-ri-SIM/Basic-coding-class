@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- 목록태그 -->
+     <!-- <select id="sel">
+        <option>목록1</option>
+        <option>목록2</option>
+        <option>목록3</option>
+        <option>목록4</option>
+     </select> -->
+     <!-- <select id="sel"></select> -->
+
+
+<h1 id="title"></h1>
+
+     <script>
+        //const sel=document.getElementById("sel");
+        //sel.innerHTML='<option>선택하세요</option>';
+        //sel.innerHTML='<option>선택하세요</option><option>선택하세요</option>';
+        //=>innerHTML='삽입할 태그와 내용';
+
+        //sel.innerHTML='<option>선택하세요</option><option>선택하세요</option>';
+        //=>재정의 되어 하나만 인식함
+
+        //선택노드.insertAdjacentHTML("위치값","삽입내용")
+    // sel.insertAdjacentHTML("afterbegin","<option>첫번째 자식으로 삽입</option>");
+    // sel.insertAdjacentHTML("beforeend","<option>마지막 자식으로 삽입</option>");
+    // sel.insertAdjacentHTML("afterend","<h1>바로 뒤 형제로 삽입</h1>");
+    // sel.insertAdjacentHTML("beforebegin","<h1>바로 앞 형제로 삽입</h1>");
+const tit=document.getElementById("title");
+tit.innerText="제목입니다.";
+//=>텍스트 형태로 삽입할때
+tit.insertAdjacentText("afterbegin","첫번째");
+tit.insertAdjacentText("beforeend","마지막");
+tit.insertAdjacentText("afterend","뒤쪽");
+tit.insertAdjacentText("beforebegin","앞쪽");
+  
+//선택.remove();
+//=>선택한 요소 삭제
+//tit.remove();
+
+     </script>
+</body>
+</html>

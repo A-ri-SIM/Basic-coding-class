@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            //선택명령
+            // 1.자식요소 선택
+            // => li>span
+            // $("li").children(".in_span").css({
+            //     color:"yellow"
+            // })
+            // =>$(부모).children(자식객체)
+
+            // 2.부모요소 선택
+            // $("span").parents().css({
+            //     background:"red"
+            // })
+            
+            // 특정요소를 찾는 선택명령
+            // $("li").find("span").css({
+            //     fontSize:60
+            // })
+            // ul span
+            // $("ul").find("span").css({
+            //     color:"red",
+            //     fontSize:60
+            // })
+            // 특정 요소를 선택할때
+            // =>배열의 index순서 활용
+            // eq(index)
+
+            // $("li").eq(0).css({
+            //     color:"red"
+            // })
+
+            // 선택한 객체를 기준으로 앞,뒤를 선택명령
+            // => 앞 prev()
+            // => 뒤 next()
+            // $(".li_box").prev().css({
+            //     color:"red"
+            // })
+            // $(".li_box").next().css({
+            //     color:"red"
+            // })
+
+            // $("li").eq(1).css({
+            //     color:"red"
+            // }).next().css({
+            //     color:"blue"
+            // });
+
+            // 문서 객체 삽입, 이동
+            // 1.문서 객체 삽입
+            // =>A를 B에 뒷 부분에 추가
+            // - $(A).appendTo(B)
+            // $(".li_box").appendTo("ul");
+            // =>A를 B의 앞부분에 추가
+            // -$(A).prependTo(B)
+            // $(".li_box").prependTo("ul");
+            // =>A를 B의 뒤에 추가
+            // -$(A).insertAfter(B)
+            // $(".li_box").insertAfter("ul");
+            // =>A를 B의 앞에 추가
+            // -$(A).insertBefore(B)
+            //$(".li_box").insertBefore("ul");
+
+            // => B를 A의 뒷부분에 추가
+            //$(A).append(B);
+            // $(".li_box").append("<h1>??</h1>");
+            // => B를 A의 앞부분에 추가
+            //$(A).prepend(B);
+            // $(".li_box").prepend("<h1>??</h1>");
+            // =>B를 A의 뒤에 추가
+            // -$(B).after(A)
+            // $(".li_box").after("ul");
+            // =>B를 A의 앞에 추가
+            // -$(B).before(A)
+            // $(".li_box").before("ul");
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>
+            <span class="in_span">1</span>
+        </li>
+        <li>2</li>
+        <li class="li_box">3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>

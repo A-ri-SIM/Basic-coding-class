@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .mask{
+            width: 1120px;
+            height: 750px;
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+            font-size:50px;
+        }
+        .move_box{
+            width: 5760px;
+            height: 600px;
+            line-height: 600px;
+            position: absolute;
+            top: 0;
+            left: -960px;
+        }
+        .img_box{
+            width: 800px;
+            height: 600px;
+            background: lightcoral;
+            margin-left: 160px;
+            float: left;
+        }
+        .but{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            position: absolute;
+            top: 250px;
+        }
+        .left_but{
+            left: 30px;
+        }
+        .right_but{
+            right: 30px;
+        }
+        .page_num{
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -100px;
+        }
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            let click_num=1;
+            $(".img_box").last().prependTo(".move_box");
+            $(".right_but").click(function(){
+                $(".move_box").animate({
+                    left:-1920
+                },1000,function(){
+                    $(".img_box").first().appendTo(".move_box");
+                    $(".move_box").css({
+                        left:-960
+                    })
+                })
+                click_num++;
+                if(click_num>6){
+                    click_num=1 
+                }
+                $("span").text(click_num);
+            });
+            $(".left_but").click(function(){
+                $(".img_box").last().prependTo(".move_box");
+                $(".move_box").css({
+                        left:-1920
+                }).animate({
+                    left:-960
+                },1000)
+                click_num--;
+                if(click_num<=0){
+                    click_num=6 
+                }
+                $("span").text(click_num);
+            });
+
+        });//끝
+    </script>
+</head>
+<body>
+    <div class="mask">
+        <div class="move_box">
+            <div class="img_box">1</div>
+            <div class="img_box">2</div>
+            <div class="img_box">3</div>
+            <div class="img_box">4</div>
+            <div class="img_box">5</div>
+            <div class="img_box">6</div>
+        </div>
+        <div class="but left_but">&lt;</div>
+        <div class="but right_but">&gt;</div>
+        <div class="page_num">
+            0<span>1</span>/ 06
+        </div>
+    </div>
+</body>
+</html>

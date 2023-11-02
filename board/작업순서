@@ -1,0 +1,7 @@
+board 폴더 만들기
+터미널 열기
+npm init : package.json 파일 설치(작업기록)
+npm i express(익스프레스패키지 설치)
+npm i mongodb(몽고디비연결 패키지 설치)
+npm i express-handlebars(디비연결 템플릿 설치)
+app.js 파일 만들기

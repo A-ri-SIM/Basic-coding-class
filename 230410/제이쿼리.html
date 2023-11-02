@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{
+            width: 300px;
+            height: 300px;
+            border: 10px solid black;
+        }
+        #id_box{
+            background: red;
+        }
+        .class_box{
+            background: blue;
+        } */
+    </style>
+    <!-- 외부스크립트 연결 -->
+    <script src="jquery-3.6.4.js"></script>
+    <!-- =>외부 스크립트 연결한 스크립트 태그 안쪽에는 아무것도 작성하지 않음 -->
+    <script>
+        $(document).ready(function(){
+            // 제이쿼리 삽입 영역
+            // 1.제이쿼리 선택자 사용법
+                $("div").css({
+                    width:300,
+                    height:300,
+                    border: "10px solid black",
+                    fontSize: "30px",
+                    textAlign:"center",
+                    lineHeight:"300px"
+                    // =>font와 관련된 크기는 px단위 생략하지 않음
+                })
+                $("#id_box").css({
+                    background:"red"
+                })
+                $(".class_box").css({
+                    background:"navy"
+                })
+
+        });
+    </script>
+</head>
+<body>
+    <div>태그 선택자</div>
+    <div id="id_box">아이디 선택자</div>
+    <div class="class_box">클래스 선택자</div>
+</body>
+</html>

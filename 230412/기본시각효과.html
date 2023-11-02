@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .out_box{
+            width: 300px;
+            height: 700px;
+            border: 10px solid black;
+            float: left;
+            margin-left: 50px;
+        }
+        button{
+            width: 100%;
+            height: 50px;
+        }
+        .in_box{
+            width: 100%;
+            height: 650px;
+            background: red;
+            font-size: 40px;
+            display: none;
+        }
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 기본 시각 효과
+            // =>$(선택자).효과명(속도,가속도형태,콜백함수)
+            // =>diplay값으로 보였다 사라짐
+            // 1.slideUP+down
+            // => slideUP() :슬라이드 되면서 사라짐
+            // => slideDown() : 슬라이드 되면서 나타남
+            // => slideToggle() :혼자 둘다
+            // 2.show+hide
+            // => show() : 크기가 커지면서 나타남
+            // => hide() : 크기가 작아지면서 사라짐
+            // => toggle() : 둘다
+            // 3.fadeIn+out
+            // => fadeIn() :투명도가 1로 나타남
+            // => fadeOut() : 투명도가 0으로 사라짐
+            // => fadeToggle() : 둘다
+            $("#sd_but").click(function(){
+                //$("#sd_box").slideUp(1000);
+                //$("#sd_box").slideDown(1000);
+                $("#sd_box").slideToggle(1000);
+            });
+            $("#sh_but").click(function(){
+                //$("#sh_box").hide(1000);
+                //$("#sh_box").show(1000);
+                $("#sh_box").toggle(1000);
+            });
+            $("#io_but").click(function(){
+                //$("#io_box").fadeOut(1000);
+                //$("#io_box").fadeIn(1000);
+                $("#io_box").fadeToggle(1000);
+            });
+
+        });//끝
+    </script>
+</head>
+<body>
+    <div class="out_box">
+        <button id="sd_but">slideUP+down</button>
+        <div class="in_box" id="sd_box">
+            슬라이드로 올라갔다 내려갔다하는 효과
+        </div>
+    </div>
+    <div class="out_box">
+        <button id="sh_but">show+hide</button>
+        <div class="in_box" id="sh_box">
+            크기가 커졌다 작아졌다
+        </div>
+    </div>
+    <div class="out_box">
+        <button id="io_but">fadeIn+out</button>
+        <div class="in_box" id="io_box">
+            투명도로 보였다 사라졌다
+        </div>
+    </div>
+</body>
+</html>

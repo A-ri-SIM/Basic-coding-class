@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .mask{
+            /* width: 600px;
+            height: 600px; */
+            /* border: 10px solid black; */
+            /* margin: 0 auto; */
+            position: relative;
+            overflow: hidden;
+            /* position: fixed; */
+        }
+        .box_wrap{
+            /* width: 600px;
+            height: 1800px; */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .box{
+            /* width: 600px;
+            height: 600px; */
+            position: relative;
+        }
+        .text_box{
+            width: 400px;
+            height: 200px;
+            text-align: center;
+            font-size: 50px;
+            line-height: 200px;
+            position: absolute;
+            left: 50%;
+            margin-left: -200px;
+            top: 50%;
+            margin-top: -100px;
+        }
+
+        .but{
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            margin-left: -25px;
+            z-index: 999999;
+        }
+        .up_but{
+            top: 0;
+            transform: rotate(-90deg);
+        }
+        .down_but{
+            bottom: 0;
+            transform: rotate(90deg);
+        }
+        
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 윈도우의 가로크기값
+            let ww=$(window).width();
+            // 윈도우의 세로크기값
+            let wh=$(window).height();
+            // alert(`${ww},${wh}`);
+            $(".mask,.box").css({
+                width:ww,
+                height:wh
+            })
+            $(".box_wrap").css({
+                width:ww,
+                height:wh*3
+            })
+
+
+            let bg_color=["red","blue","green"];
+            $(".box").css({
+                background:function(index){
+                    return bg_color[index]
+                }
+            })
+
+            let a=0;
+            $(".down_but").click(function(){
+                a++;
+                $(".box").animate({
+                    top:-a*wh
+                },500)
+            })
+            $(".up_but").click(function(){
+                a--;
+                $(".box").animate({
+                    top:-a*wh
+                },500)
+            })
+
+        });//끝
+    </script>
+</head>
+<body>
+    <div class="mask">
+        <div class="box_wrap">
+            <div class="box">
+                <div class="text_box">main</div>
+                <div class="but down_but">></div>
+            </div>
+            <div class="box">
+                <div class="text_box">page_1</div>
+                <div class="but up_but">></div>
+                <div class="but down_but">></div>
+            </div>
+            <div class="box">
+                <div class="text_box">page_2</div>
+                <div class="but up_but">></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

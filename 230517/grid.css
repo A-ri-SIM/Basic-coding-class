@@ -1,0 +1,46 @@
+.gr{
+    background: gray;
+    margin: 10px 10px;
+    float: left;
+    height: 100px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 100px;
+}
+.g_1{
+    width: 140px;
+}
+.g_2{
+    width: 300px;
+}
+.g_3{
+    width: 460px;
+}
+.g_4{
+    width: 620px;
+}
+.g_5{
+    width: 800px;
+}
+.g_6{
+    width: 940px;
+}
+.g_7{
+    width: 1100px;
+}
+.g_8{
+    width: 1280px;
+}
+.g_9{
+    width: 1440px;
+}
+.g_10{
+    width: 1600px;
+}
+.g_11{
+    width: 1820px;
+}
+.g_12{
+    width: 1920px;
+    margin: 0;
+}

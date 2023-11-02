@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    }
+    ul,li{
+        list-style: none;
+    }
+
+    /* 1.블럭형식안에 메뉴 작성
+    =>가로크기 일정
+    =>영역의 크기가 정해져있을때 */
+    .top_main_menu_wrap{
+        width: 900px;
+        height: 50px;
+        background: lightblue;
+    }
+    .menu{
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 14px;
+        border-right: 1px solid gray;
+        box-sizing: border-box;
+        float: left;
+    }
+
+
+    /* 2.인라인형식 태그 삽입하여 메뉴 작성 */
+    .menu_wrap>a{
+        font-size: 14px;
+        line-height: 14px;
+        margin: 0 15px;
+        background: lightblue;
+    }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <ul class="top_main_menu_wrap">
+        <li class="menu">
+            <a href="#">정보공개</a>
+        </li>
+        <li class="menu">
+            <a href="#">안전보건경영</a>
+        </li>
+        <li class="menu">
+            <a href="#">웹메일</a>
+        </li>
+        <li class="menu">
+            <a href="#">고객만족경영</a>
+        </li>
+        <li class="menu">
+            <a href="#">청렴행정</a>
+        </li>
+        <li class="menu">
+            <a href="#">개인정보처리방침</a>
+        </li>
+        <li class="menu">
+            <a href="#">ENG</a>
+        </li>
+        <li class="menu">
+            <a href="#">CHI</a>
+        </li>
+        <li class="menu">
+            <a href="#">팝업 0 건</a>
+        </li>
+
+    </ul>
+
+
+    <div class="menu_wrap">
+        <a href="#">정보공개</a>
+        <a href="#">안전보건경영</a>
+        <a href="#">웹메일</a>
+        <a href="#">고객만족경영</a>
+        <a href="#">청렴행정</a>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">ENG</a>
+        <a href="#">CHI</a>
+        <a href="#">팝업 0 건</a>
+    </div>
+</body>
+</html>

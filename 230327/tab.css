@@ -1,0 +1,147 @@
+/* 959~360일때 */
+@media all and (max-width:959px) and (min-width:360px){
+    /* *{
+        margin: 0;
+        padding: 0;
+        transition-duration: 0.5s;
+       }
+        #wrap{
+            width: 360px;
+            overflow: hidden;
+            margin: 0 auto;
+            background: lightgreen;
+        }
+        header{
+            width: 360px;
+            height: 120px;
+            background: orange;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            box-sizing: border-box;
+        }
+        .main_logo{
+            width: 200px;
+            height: 40px;
+            background: red;
+            margin: 0 auto;
+        }
+        #mo_main_menu,.toggle_menu_wrap{
+            display: none;
+        }
+        .main_menu_wrap{
+            width: 360px;
+            height: 40px;
+            background: seagreen;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .out_box{
+            width: 360px;
+            overflow: hidden;
+            background: aqua;
+            margin-bottom: 30px;
+        }
+        .main_banner_wrap{
+            height: 200px;
+            background: yellow;
+        }
+        .in_box{
+            height: 43px;
+            background: blue;
+            float: left;
+            margin-bottom: 10px;
+        }
+        .f_con{
+            width: 360px;
+        }
+        .b_con{
+            width: 113.33px;
+            height: 60px;
+            margin-right: 10px;
+        }
+        /* .b_con:nth-child(3),.b_con:nth-child(6){
+            margin-right: 0;
+        } */
+        /* .b_con:nth-child(3n){
+            margin-right: 0;
+        }
+        footer{
+            width: 360px;
+            height: 50px;
+            background: hotpink;
+            margin: 0 auto;
+        } */ 
+
+         /* %단위값 수정영역 */
+         *{
+            margin: 0;
+            padding: 0;
+            transition-duration: 0.5s;
+           }
+            #wrap{
+                /* width: 360px; */
+                width: 100%;
+                /* 360/959=0.37539*100=37.53 */
+                overflow: hidden;
+                margin: 0 auto;
+                background: lightgreen;
+            }
+            header{
+                width: 100%;
+                height: 200px;
+                background: orange;
+                margin-bottom: 30px;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .main_logo{
+                width: 15.625%;
+                height: 80px;
+                margin: 0 auto;
+                background: red;
+            }
+            #mo_main_menu,.toggle_menu_wrap{
+                display: none;
+            }
+            .main_menu_wrap{
+             
+                width: 100%;
+                height: 80px;
+                background: seagreen;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+            .out_box{
+                width: 100%;
+                overflow: hidden;
+                background: aqua;
+                margin-bottom: 30px;
+            }
+            .main_banner_wrap{
+                height: 500px;
+                background: yellow;
+            }
+            .in_box{
+                height: 150px;
+                background: blue;
+                float: left;
+                margin-bottom: 10px;
+            }
+            .f_con{
+                width: 100%;
+            }
+            .b_con{
+                width: 33%;
+                margin-right: 0.5%;
+            }
+            .b_con:nth-child(3n){
+                margin-right: 0;
+            }
+            footer{
+                width: 100%;
+                height: 100px;
+                background: hotpink;
+            }
+
+
+}/*닫히는영역 지우지 않기 */

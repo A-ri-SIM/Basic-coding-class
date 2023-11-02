@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .page{
+            background: red;
+            position: relative;
+        }
+        .in_page{
+            background: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 윈도우를 첫번째 열었을때 읽어오는 영역
+            layout();
+            //윈도우의 크기를 변경할때 읽어보는 영역
+            $(window).resize(function(){
+                layout();
+            })
+
+
+
+
+
+
+
+
+            function layout(){
+                ww=$(window).width();
+                wh=$(window).height();
+                $(".page").css({
+                    width:ww,
+                    height:wh
+                });
+                $(".in_page").css({
+                    width:ww*0.8,
+                    height:wh*0.8,
+                    marginLeft:-(ww*0.8)/2,
+                    marginTop:-(wh*0.8)/2
+                })
+            }
+
+
+
+        });//끝
+    </script>
+</head>
+<body>
+    <section class="page">
+        <div class="in_page"></div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .mask{
+            width: 700px;
+            height: 500px;
+            border: 10px solid black;
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+        }
+        .move_box{
+            width: 3500px;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .img_box{
+            width: 700px;
+            height: 500px;
+            font-size: 100px;
+            line-height: 500px;
+            float: left;
+        }
+        .but{
+            width: 100px;
+            height: 100px;
+            font-size: 100px;
+            line-height: 100px;
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+        }
+        .left_but{
+            left: 0;
+            transform: rotate(-180deg);
+        }
+        .right_but{
+            right: 0;
+        }
+        .but_wrap{
+            width: 230px;
+            height: 30px;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -115px;
+        }
+        .but_sc{
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            line-height: 30px;
+            margin-right: 20px;
+            float: left;
+        }
+        .but_sc:last-child{
+            margin-right: 0;
+        }
+        .on{
+            color: white;
+        }
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+        let bg=["red","blue","yellow","green","plum"]
+        $(".img_box").css({
+            background : function(index){
+                return bg[index];
+            }
+        });
+
+        // $(".right_but").click(function(){
+        //     $(".move_box").animate({
+        //         left:-700
+        //     },1000,function(){
+        //         $(".img_box").first().appendTo(".move_box");
+        //         $(".move_box").css({
+        //             left:0
+        //         })
+        //     });   
+        // });
+
+        // $(".left_but").click(function(){
+        //     $(".img_box").last().prependTo(".move_box");
+        //     $(".move_box").css({
+        //         left:-700
+        //     }).animate({
+        //         left:0
+        //     },1000)
+        // });
+
+        // let end_time=setInterval(function(){
+        //     $(".right_but").trigger("click")
+            
+        // },2000);
+
+        // $(".but,.but_wrap").hover(function(){
+        //     clearInterval(end_time);
+        // },function(){
+        //     end_time=setInterval(function(){
+        //     $(".right_but").trigger("click")
+        // },2000);
+        // });
+
+        // $(".but_sc").click(function(){
+        //     let a=$(this).index();
+        //     $(".but_sc").removeClass("on");
+        //     $(this).addClass("on");
+        //     $(".move_box").animate({
+        //         left:-a*700
+        //     },1000)
+        // })
+        let click_num=0;
+        $(".right_but").click(function(){
+            click_num++;
+            if(click_num>4){
+                click_num=0;
+            }
+            // $(".move_box").animate({
+            //     left:-700*click_num
+            // },1000);
+            $(".move_box").animate({
+                left:-700
+            },1000,function(){
+                $(".img_box").first().appendTo(".move_box");
+                $(".move_box").css({
+                    left:0
+                })
+            });   
+
+            $(".but_sc").removeClass("on");
+            $(".but_sc").eq(click_num).addClass("on");
+        });
+        $(".left_but").click(function(){
+            click_num--;
+             if(click_num<=0){
+               click_num=4;
+             }
+            // $(".move_box").animate({
+            //     left:-700*click_num
+            // },1000);
+            $(".img_box").last().prependTo(".move_box");
+            $(".move_box").css({
+                left:-700
+            }).animate({
+                left:0
+            },1000)
+            $(".but_sc").removeClass("on");
+            $(".but_sc").eq(click_num).addClass("on");
+        });
+        $(".but_sc").click(function(){
+            click_num=$(this).index();
+            $(".but_sc").removeClass("on");
+            $(this).addClass("on");
+            $(".move_box").animate({
+                left:-700*click_num
+            },1000);
+        });
+        let end_time=setInterval(function(){
+            $(".right_but").trigger("click")
+            
+        },3000);
+
+        $(".but,.but_wrap").hover(function(){
+            clearInterval(end_time);
+        },function(){
+            end_time=setInterval(function(){
+            $(".right_but").trigger("click")
+        },3000);
+        });
+
+
+
+
+
+        });//끝
+    </script>
+</head>
+<body>
+    <div class="mask">
+        
+        <div class="move_box">
+            <div class="img_box">1</div>
+            <div class="img_box">2</div>
+            <div class="img_box">3</div>
+            <div class="img_box">4</div>
+            <div class="img_box">5</div>
+        </div>
+        <div class="but left_but">></div>
+        <div class="but right_but">></div>
+        <div class="but_wrap">
+            <div class="but_sc on">●</div>
+            <div class="but_sc">●</div>
+            <div class="but_sc">●</div>
+            <div class="but_sc">●</div>
+            <div class="but_sc">●</div>
+        </div>
+    </div>
+</body>
+</html>

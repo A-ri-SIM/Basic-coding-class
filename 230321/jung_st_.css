@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 헤더영역 */
+/* 텍스트
+-텍스트크기지정
+-가로세로정렬
+-굵기설정 */
+/* header스타일 */
+/* 가로1760 */
+/* 세로50 */
+/* 중앙정렬 */
+header{
+    width: 1760px;
+    height: 50px;
+    background: lightpink;
+    margin: 0 auto;
+    position: relative;
+}
+/* 로고영역 */
+/* logo */
+/* 가로95,세로50
+왼쪽정렬(float,position) */
+.logo{
+    width: 95px;
+    height: 50px;
+    background:lightgreen;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 메인메뉴영역  */
+/* main_menu_wrap */
+/* 가로800,세로50
+중앙정렬(margin,position) */
+.main_menu_wrap{
+    width: 800px;
+    height: 50px;
+    background: lightcoral;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -400px;
+}
+
+/* 로그인메뉴영역 */
+/* login_menu_wrap */
+/* 가로180,세로50
+오른쪽정렬(float,position) */
+.login_menu_wrap{
+    width: 180px;
+    height: 50px;
+    background: lightblue;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/* 메인배너영역 */
+/* 가로1920,세로830
+중앙정렬 */
+.main_banner_wrap{
+    width: 1920px;
+    height: 830px;
+    background: green;
+    margin: 0 auto;
+    position: relative;
+}
+/* 텍스트영역
+가로600,세로450
+중앙에서 왼쪽으로 200만큼 이동(position)
+세로중앙 */
+.main_banner_text_wrap{
+    width: 600px;
+    height: 450px;
+    background: wheat;
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    /* margin-left: -650px; */
+    margin-left: -800px;
+}
+
+/* 배너메뉴영역
+가로80,세로400
+중앙에서 오른쪽으로 800만큼 이동(position)
+세로중앙*/
+.main_banner_menu_wrap{
+    width: 80px;
+    height: 400px;
+    background: wheat;
+    position: absolute;
+    top: 215px;
+    left: 50%;
+    /* margin-left: 800px; */
+    margin-left: 840px;
+}
+
+/* 섹션영역 */
+/* 가로1330,세로자식맞춤
+중앙에서 위치설정 왼쪽
+1760크기안에서 사이드영역과 70여백 위치(position)*/
+section{
+    width: 1330px;
+    overflow: hidden;
+    background: lightgrey;
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -880px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+}
+.box{
+    width: 1330px;
+    background: lightcoral;
+    margin-bottom: 50px;
+}
+
+/* 브랜드배너영역 세로 530*/
+.brand_banner_wrap{
+    height: 530px;
+}
+
+/* 섹션과 메인 배너 사이 100
+섹션과 푸터사이 여백 100
+article 사이 여백 50 */
+
+/* 기업이념영역 세로 530*/
+.busines_idea{
+    height: 530px;
+}
+
+/* r&d 활동 영역 세로 420*/
+.rnd_act{
+    height: 420px;
+}
+
+/* 베지밀 영유아식 세로 420 */
+.kids_pro{
+    height: 420px;
+}
+
+/* 레시피영역 세로 1260*/
+.racipe_wrap{
+    height: 1260px;
+}
+
+/* 베스트상품영역 세로 960*/
+.best_pro{
+    height: 960px;
+}
+
+/* 제품음용후기영역 세로 620*/
+.pro_memo{
+    height: 620px;
+}
+/* 맛잇고건강한레시피영역 세로 780 */
+.good_racipe{
+    height: 780px;
+}
+/* 정보안내영역(웹진+sns+이용안내) 세로 500 */
+.web_info{
+    height: 500px;
+    margin-bottom: 0;
+}
+
+/* 푸터영역 */
+/* 가로 1920,세로 자식맞춤
+아래여백 200 */
+footer{
+    width: 1920px;
+    overflow: hidden;
+    background: gray;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    position: relative;
+}
+
+/* 풀메뉴영역 */
+/* 사이트정보영역 */
+/* 가로 1760,세로 300'
+중앙정렬
+세로부모와 50사이여백 */
+.in_footer_wrap{
+    width: 1760px;
+    height: 300px;
+    background: white;
+    margin: 50px auto;
+}
+
+/* 사이드영역 */
+/* 가로360,세로900
+-중앙에서 위치 설정 오른쪽으로 가기
+1760크기안에서 섹션영역과 70여백두고 위치
+항상위치고정(position) */
+/* 정식품브랜드 */
+/* 전체카테고리 */
+/* 부모와 사이 여백 30
+여백 빼고 가로 
+세로 전체카테고리와 사이 여백 30빼고
+정식품브랜드 전체카테고리 세로크기 동일 */
+aside{
+    width: 360px;
+    height: 900px;
+    background: lightgrey;
+    padding: 30px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 980px;
+    left: 50%;
+    margin-left: 520px;
+}
+.aside_brand_wrap,.aside_all_category{
+    width: 300px;
+    height: 405px;
+    background: lightsalmon;
+    margin-bottom: 30px;
+}
+.aside_all_category{
+    margin-bottom: 0;
+}

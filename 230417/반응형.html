@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            // let ww=$(window).width();
+            // let wh=$(window).height();
+           
+            layout();
+            // if(ww>1280){
+            //         $(".wrap").css({
+            //             background:"yellow"
+            //         });
+            //     }else if(ww<=1280){
+            //         $(".wrap").css({
+            //             background:"red"
+            //         });
+            //     }
+
+            // 윈도우의 크기 변경 시 이벤트
+            $(window).resize(function(){
+                layout();
+            //     $(".wrap").css({
+            //     width:1000,
+            //     height:900,
+            //     background:"blue",
+            //     margin:"0 auto"
+            //     });
+                // ww=$(window).width();
+                // wh=$(window).height();
+                // if(ww>1280){
+                //     $(".wrap").css({
+                //         background:"yellow"
+                //     });
+                // }else if(ww<=1280){
+                //     $(".wrap").css({
+                //         background:"red"
+                //     });
+                // }
+            });
+
+            function layout(){
+                $(".wrap").css({
+                width:ww*0.8,
+                height:ww*0.6,
+                margin:"0 auto"
+                });
+                ww=$(window).width();
+                wh=$(window).height();
+                if(ww>1280){
+                    $(".wrap").css({
+                        background:"yellow"
+                    });
+                }else if(ww<=1280){
+                    $(".wrap").css({
+                        background:"red"
+                    });
+                }
+            }
+
+            // 윈도우 이벤트 resize를 활용한 반응형
+            // 1.함수형태로 표현해야지되는 레이아웃을 작성함
+            // 2.크기값이 변경되는 부분을 if문으로 사용 윈도우의 크기값을 조건식 맞춤
+            // 3.윈도우에서 크기값의 변경 시 기본 레이아웃 안에서 로드 되는 영역은 if문과 상관없이 크기값 조절됨
+            // 4.함수로 작성되어야 첫번째 윈도우가 로드되었을때의 영역과 윈도우가 크기 변경되었을때 영역이 동일하게 구동
+
+
+
+
+
+
+        });//끝
+    </script>
+</head>
+<body>
+    <div class="wrap"></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;    
+}
+/* 가로 1920 크기의 박스 영역 */
+.width_size_1920{
+    width: 1920px;
+    overflow: hidden;
+    background: darkolivegreen;
+    margin: 0 auto;
+}
+/* 가로 1440 크기의 박스 영역 */
+.width_size_1440{
+    width: 1440px;
+    overflow: hidden;
+    background: gray;
+    margin: 0 auto;
+}
+/* 각 상품 리스트 text 영역 */
+.item_title{
+    width: 1440px;
+    height: 50px;
+    background: blueviolet;
+}
+/* 가로 float정렬 영역 */
+.item_float{
+    float: left;
+}
+/* 상품 사이즈 400X500영역 */
+.item_box_400x500{
+    width: 400px;
+    height: 500px;
+    background: lightblue;
+    margin-right: 120px;
+}
+/* 상품 사이즈 300X400영역 */
+.item_box_300x400{
+    width: 300px;
+    height: 400px;
+    background: lightgreen;
+    margin-right: 80px;
+}

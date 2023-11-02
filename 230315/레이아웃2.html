@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #warp{
+            width: 1200px;
+            height: 900px;
+            border: 10px solid black;
+           
+            margin: 0 auto;
+        }
+        .con_box{
+            width: 1100px;
+            border: 10px solid blue;
+            box-sizing: border-box;
+            margin: 50px auto;
+        }
+         .con_box:first-child{
+            height: 150px;
+            /* margin-top: 50px; */
+        }
+        .con_box:nth-child(2){
+            height: 350px;
+            padding: 10px;
+            
+        }
+        #con_box_1{
+            width: 1000px;
+            margin: 5px auto;
+        }
+        .con_box:last-child{
+            height: 200px;
+        }
+        #in_box_1{
+            width: 1000px;
+            height: 50px;
+            border: 10px solid black;
+            margin: 10px auto;
+        }
+        .in_box_2{
+            width: 450px;
+            height: 110px;
+            border: 10px solid black;
+            float: left;
+        }
+       
+        .in_box_2:first-child{
+            margin: 10px ;
+        }
+        .in_box_2:nth-child(2){
+            margin: 10px ;
+         }
+        .in_box_2:nth-child(3){
+            margin: 10px ;
+        }
+        .in_box_2:nth-child(4){
+            margin: 10px ;
+        }
+                 
+        .in_box_3{
+            height: 50px;
+            border: 10px solid black;
+        }
+        .in_box_3:first-child{
+            width: 600px;
+            margin: 10px auto;
+        }
+        .in_box_3:last-child{
+            width: 1000px;
+            margin: 20px auto;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+ <div id="warp">
+    <div class="con_box">
+        <div id="in_box_1"></div>
+    </div>
+    <div class="con_box">
+        <div id="con_box_1">
+            <div class="in_box_2"></div>
+            <div class="in_box_2"></div>
+            <div class="in_box_2"></div>
+            <div class="in_box_2"></div>
+        </div>
+    </div>
+    <div class="con_box">
+        <div class="in_box_3"></div>
+        <div class="in_box_3"></div>
+    </div>
+ </div>   
+
+
+
+
+</body>
+</html>

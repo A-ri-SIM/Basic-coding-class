@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            background: black;
+        }
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="jquery.mousewheel.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $(선택자).on("mousewheel",function(event,delta){
+            //     if(delta>0){
+            //         //휠을 올렸을때
+            //     }else if(delta<0){
+            //         //휠을 내렸을때
+            //     }
+            // });
+            // $(선택자).mousewheel(function(event,delta){
+            //     if(delta>0){
+            //         //휠을 올렸을때
+            //     }else if(delta<0){
+            //         //휠을 내렸을때
+            //     }
+            // });
+            $(".box").mousewheel(function(event,delta){
+                if(delta>0){
+                    $(".box").css({
+                        background:"red"
+                    })
+                }else if(delta<0){
+                    $(".box").css({
+                        background:"blue"
+                    })
+                }
+            })
+
+        });//끝
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

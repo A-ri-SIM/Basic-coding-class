@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .mask{
+            position: fixed;
+        }
+        .move_box{
+            position: absolute;
+        }
+        .top_box,.bottom_box{
+            margin: 0 auto;
+        }
+        .width_box>.box{
+            float: left;
+        }
+        .box{
+            text-align: center;
+            font-size: 100px;
+            position: relative;
+        }
+        .but{
+            width: 50px;
+            height: 50px;
+            font-size: 50px;
+            font-weight: 1000;
+            line-height: 50px;
+            position: absolute;
+        }
+        .top_to_main,.main_to_top,.main_to_bottom,.bottom_to_main{
+            left: 50%;
+            margin-left: -25px;
+        }
+        .left_to_main,.main_to_left,.main_to_right,.right_to_main{
+            top: 50%;
+            margin-top: -25px;
+        }
+        .top_to_main,.main_to_bottom{
+            bottom: 0;
+            transform: rotate(90deg);
+        }
+        .main_to_top,.bottom_to_main{
+            top: 0;
+            transform: rotate(-90deg);
+        }
+        .left_to_main,.main_to_right{
+            right: 0;
+        }
+        .main_to_left,.right_to_main{
+            left: 0;
+            transform: rotate(-180deg);
+        }
+        
+        
+        
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            let ww=$(window).width();
+            let wh=$(window).height();
+            $(".mask,.box").css({
+                width:ww,
+                height:wh
+            })
+            
+            $(".move_box").css({
+                width:ww*3,
+                height:wh*3,
+                top:-wh,
+                left:-ww
+                                
+            });
+            $(".width_box").css({
+                width:ww*3,
+                height:wh
+            });
+            let bg=["red","blue","green","orange","plum"];
+            $(".box").css({
+                width:ww,
+                height:wh,
+                background:function(index){
+                    return bg[index]
+                },
+                lineHeight:wh+"px"
+            });
+            $(".top_to_main,.bottom_to_main").click(function(){
+                $(".move_box").animate({
+                    top:-wh
+                },500)
+            });
+            $(".left_to_main,.right_to_main").click(function(){
+                $(".move_box").animate({
+                    left:-ww
+                },500)
+            });
+            $(".main_to_top").click(function(){
+                $(".move_box").animate({
+                    top:0
+                },500)
+            });
+            $(".main_to_bottom").click(function(){
+                $(".move_box").animate({
+                    top:-wh*2
+                },500)
+            });
+            $(".main_to_left").click(function(){
+                $(".move_box").animate({
+                    left:0
+                },500)
+            });
+            $(".main_to_right").click(function(){
+                $(".move_box").animate({
+                    left:-ww*2
+                },500)
+            });
+            // $(".right_to_main").click(function(){
+            //     $(".move_box").animate({
+            //         left:-ww
+            //     },500)
+            // });
+            // $(".bottom_to_main").click(function(){
+            //     $(".move_box").animate({
+            //         top:-wh
+            //     },500)
+            // });
+
+        });//끝
+    </script>
+</head>
+<body>
+    <div class="mask">
+        <div class="move_box">
+            <div class="box top_box">
+                <h1>위</h1>
+                <div class="but top_to_main">></div>
+            </div>
+            <div class="width_box">
+                <div class="box">
+                    <h1>왼쪽</h1>
+                    <div class="but left_to_main">></div>
+                </div>
+                <div class="box">
+                    <h1>MAIN</h1>
+                    <div class="but main_to_top">></div>
+                    <div class="but main_to_bottom">></div>
+                    <div class="but main_to_left">></div>
+                    <div class="but main_to_right">></div>
+                </div>
+                <div class="box">
+                    <h1>오른쪽</h1>
+                    <div class="but right_to_main">></div>
+                </div>
+            </div>
+            <div class="box bottom_box">
+                <h1>아래</h1>
+                <div class="but bottom_to_main">></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

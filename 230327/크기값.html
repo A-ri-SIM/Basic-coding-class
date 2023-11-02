@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* html,body{
+            height: 100%;
+        }
+        =>현재의 html,body영역의 height값 기준설정
+        =>body의 자식영역에서 height값의 100% 부모인식 */
+        #px_wigth{
+            width: 300px;
+            height: 300px;
+            background-color: rebeccapurple;
+            /* =>px  단위값은 고정 크기값
+            =>자기자신이 기준 */
+        }
+        #per_width{
+            width: 100%;
+            height: 100%;
+            background-color: lightcoral;
+            /* =>%단위값은 유동값
+            =>부모의 크기가 기준 */
+        }
+        #vw_wigth{
+            width: 100vw;
+            height: 100vh;
+            background-color: aquamarine;
+            /* =>vw 단위값 유동값
+            =>%와 동일하게 생각하기
+            =>기기의 가로세로 크기값이 기준 */
+        }
+    </style>
+</head>
+<body>
+    <div id="px_wigth">px단위값</div>
+    <div id="per_width">%단위값</div>
+    <div id="vw_wigth">기기 단위값</div>
+</body>
+</html>

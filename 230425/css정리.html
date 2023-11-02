@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자
+        1.태그 선택자
+        =>html을 그대로 선택할때 사용
+        2.클래스 선택자
+        =>html내부에 class속성으로 지정한 선택자
+        =>.클래스명
+        =>여러번 동일한 이름을 사용할수있음
+        =>클래스 활용을 잘하면 레이아웃을 잘 설정 할 수 있음
+        3.아이디 선택자
+        =>html 내부에 id속성으로 지정한 선택자
+        =>#아이디명
+        =>무조건 한번만 지정할수있음
+        =>하나의 객체를 선택 효과,기능을 삽입할때 사용
+        =>input태그 활용시에는 id와 for로 연결
+        4.* 전체 선택자
+        =>html 모든 요소를 선택
+        =>초기 여백값 설정시 사용
+        5.하위 선택자(후손 선택자)
+        =>기준부모선택 하위영역요소선택
+        =>빈 공백으로 구분
+        =>자손에는 자식영역 포함
+        6.자식 선택자
+        =>기준부모>자식요소
+        7.형제후위선택자
+        =>형제 중 뒤에 있는 형제를 선택
+        =>기준형제~선택형제
+        8.추가선택자
+        =>선택1,선택2,선택3...
+        =>여러개를 그룹화하여 스타일 지정 시 사용
+        9.순서선택자(가상요소선택자)
+        =>부모기준으로 자식의 순서값에 따른 선택자
+        =>:first-child,:last-child,:nth-child(순서) */
+        /* 10.요소의 첫 글자 선택자
+        =>:first-letter */
+        p::first-letter{
+            font-size: 100px;
+            color: red;
+        }
+        /* 11.선택한요소 앞에 가상 요소 삽입 */
+        p::before{
+            content: "|";
+            margin-right: 50px;
+        }
+         /* 12.선택한요소 뒤에 가상 요소 삽입 */
+         p::after{
+            content: "♨";
+            color: blue;
+            margin-left: 50px;
+         }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>12345</p>
+        <p>67890</p>
+        <p>abcde</p>
+        <p>fghig</p>
+    </div>
+</body>
+</html>

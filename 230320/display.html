@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.블럭형식 태그
+        =>가로 세로 크기가 있음
+        =>기본 세로 정렬
+        =>초기화 이후 지정하지 않은 여백 없음
+
+        2.인라인형식 태그
+        =>가로세로 크기 없음
+        =>기본 가로 정렬
+        =>초기화로 기본 지정된 여백 제거 안됨
+
+        3.인라인-블럭 태그
+        =>가로세로 크기 있음
+        =>기본 가로 정렬
+        =>초기화로 기본 지정된 여백 제거 안됨
+
+        태그의 형식과 관련된 속성
+        display:block, inline, inline_block
+        =>태그의 기본 형식을 변경함 */
+        .block_box{
+            width: 300px;
+            height: 300px;
+            border: 10px solid black;
+            display: none;
+            /* =>태그의 형식을 없애기
+            =>결과에서 인식 안함 */
+        }
+        .inline_box{
+            width: 300px;
+            height: 300px;
+            border: 10px solid red;
+            display: block;
+            visibility: hidden;
+            /* =>보이지 않게 하는 속성
+            =>보이지만 않음,형식은 있음 */
+        }
+    </style>
+</head>
+<body>
+    <div class="block_box">블럭형식</div>
+    <div class="block_box">블럭형식</div>
+    <div class="block_box">블럭형식</div>
+    <span class="inline_box">인라인형식</span>
+    <span class="inline_box">인라인형식</span>
+    <span class="inline_box">인라인형식</span>
+
+</body>
+</html>

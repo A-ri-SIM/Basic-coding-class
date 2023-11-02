@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 5000px;
+            height: 5000px;
+        }
+        p{
+            font-size: 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                // let st=$(this).scrollTop();
+                //세로 스크롤의 위치값
+                //let st=$(this).scrollLeft();
+                //가로스크롤의 위치값
+                $("p").text(st);
+            });
+
+        });//끝
+    </script>
+</head>
+<body>
+    <p></p>
+</body>
+</html>

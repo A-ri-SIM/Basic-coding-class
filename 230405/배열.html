@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let num=10;
+        // let nums=[10,20,30,40,50];
+        // let furits=["사과","배","포도","딸기","바나나"];
+        // index:배열의 방번호,0부터 시작
+        // length:배열의 방 갯수 
+        // => 마지막 index+1=length
+        // => 마지막 index=length-1
+        // document.write(furits[0],"<br>");
+        // document.write(furits[1],"<br>");
+        // document.write(furits[2],"<br>");
+        // document.write(furits[3],"<br>");
+        // document.write(furits[4],"<br>");
+
+
+        // for문으로 furits 출력
+        // for(let a=0;a<furits.length;a++){
+        //     document.write(furits[a],"<br>");
+        // }   
+        // for(let a=furits.length-1;a>=0;a--){
+        //     document.write(furits[a],"<br>");
+        // }   
+        // 배열의 순차값 활용하는 for in 문
+        // for(i in furits){
+        //     document.write(furits[i],"<br>");
+        // }
+        // 빨강 장미를 모두 하얀 장미로 바꾸기
+        // let roses=["빨강장미","빨강장미","빨강장미","빨강장미"];
+        // roses[0]="하얀장미";
+        // document.write(roses[0],"<br>");
+        // document.write(roses,"<br>");
+        
+        // for(a in roses){
+        //     document.write(roses[a]="하얀장미 ");
+        // }
+        
+        // let age=[22,21,17,32,4,28,19,8]
+        // let a=8000;
+        // let b=5000;
+        // let c=2500;
+        // let t=0;
+        // for(i in age){
+        //         if(age[i]>=20){t+=a}
+        //         else if(age[i]<20 && age[i]>=10){t+=b}
+        //         else{t+=c}
+        //     } 
+        // document.write(`오늘의 총 매출은 ${t}원 입니다.`);
+        
+        let a=Number(prompt("숫자를 입력해주세요.",""));
+        let furits=["딸기","사과","귤","감","배","포도","샤인머스켓","복숭아","메론","수박"];
+        // document.write("과일의 종류 : <br>");
+        // for(i in furits){
+        //     document.write(`${i}-${furits[i]} `);
+        // }
+        // document.write("<br>");
+        // if(a>=0 && a<10){
+        //     document.write(`입력한 수는 ${a}이고, 선택한 과일은 ${furits[a]}입니다.`);}
+        //     else{document.write("0~9까지 숫자를 입력해주세요");};
+        if(a%2==0){
+            for(i=0;i<furits.length;i+=2)
+            document.write(`${furits[i]} `);
+        }else{
+            for(i=0;i<furits.length;i+=2)
+            document.write(`${furits[i]} `);
+        }
+        
+        
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.mask영역
+        =>영역확인 테두리
+        =>위치값 기준 */
+        #mask{
+            width: 500px;
+            height: 500px;
+            border: 10px solid black;
+            overflow: hidden;
+            position: relative;
+        }
+        /* 2.img_move_wrap
+        =>실제 위치값 변경되는 영역
+        =>부모인 mask영역안에서 위치변경 */
+        .img_move_wrap{
+            width: 2500px;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        /* 3.img_box
+        =>각 박스에 배경색 지정
+        =>가로 정렬(가로위치값조절애니메이션) */
+        .img_box{
+            width: 500px;
+            height: 500px;
+            /* background: red; 
+            배경색=>스크립트*/
+            float: left;
+            font-size: 70px;
+            text-align: center;
+            line-height: 500px;
+        }
+        /* .img_box_2{
+            background: blue;
+        }
+        .img_box_3{
+            background: plum;            
+        }
+        .img_box_4{
+            background: aqua;
+        }
+        .img_box_5{
+            background: green;
+        } */
+        /* 4.but
+        =>왼쪽(left_but),오른쪽(right_but)
+        =>세로중앙위치
+        =>형제에 맞추어 위치조절 */
+        .but{
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+            position: absolute;
+            top: 50%;
+            margin-top: -25px;
+            z-index: 999999;
+        }
+        .left_but{
+            left: 10px;
+        }
+        .right_but{
+            right: 10px;
+        }
+
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 태그의 한 부모 안쪽 자식은 배열처리
+            // =>배열처리가 되면 index순서값 활용
+            let bg_color=["red","blue","plum","yellow","green"];
+            $(".img_box").css({
+                // 태그의 인덱스값을 자동으로 가지고 오기
+                background:function(index){
+                    // 함수안에있는 어떠한 값을 밖으로 보내기
+                    return bg_color[index]
+                }
+            })
+
+            let a=0;
+            
+            // 1.right_but 클릭 할때 img_move_wrap가 왼쪽으로 500만큼이동
+            $(".right_but").click(function(){
+                // right_but을 클릭하면
+                // img_move_wrap가 클릭할때마다
+                // 0,-500(1*-500),-1000(2*-500),-1500(3*-500)
+                a++;
+                if(a>4){
+                    a=0;
+                }
+                $(".img_move_wrap").animate({
+                left:-a*500
+                },500)
+                
+            })
+            
+            // 2.left_but 클릭 할때 img_move_wrap가 오른쪽으로 500만큼이동
+            // 이동시 애니메이트 시간값 500
+            
+            $(".left_but").click(function(){
+                // left_but는 right_but를 클릭한 후로 가정
+                // =>a는 증가 상태
+                // 0,1,2,3,4 증가되어있음
+                // =>증가된 위치값을 감소시켜서
+                // 마치 오른쪽으로 이동하는 것처럼 보이는 것
+                a--;
+                if(a<=0){
+                    a=0;
+                }
+                $(".img_move_wrap").animate({
+                left:-a*500
+                },500);
+                    
+                
+            });
+
+
+
+
+        });//끝
+    </script>
+</head>
+<body>
+    <!-- 1.mask영역 500*500 -->
+    <div id="mask">
+        <!-- 2.img_move_wrap -->
+        <div class="img_move_wrap">
+            <!-- 3.img_box *5 -->
+            <div class="img_box img_box_1">1</div>
+            <div class="img_box img_box_2">2</div>
+            <div class="img_box img_box_3">3</div>
+            <div class="img_box img_box_4">4</div>
+            <div class="img_box img_box_5">5</div>
+        </div>
+        <!-- 4.버튼 왼쪽,오른쪽 50*50  -->
+        <h1 class="but left_but"> &lt; </h1>
+        <h1 class="but right_but"> &gt; </h1>
+    </div>
+    
+
+
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.top{
+    width: 1920px;
+    height: 50px;
+    background: red;
+    position: fixed;
+    left: 50%;
+    margin-left: -960px;
+    z-index: 999999;
+}
+.top_menu{
+    width: 1200px;
+    height: 50px;
+    background: green;
+    margin: 0 auto;
+        
+}
+.menu{
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+}
+.menu:hover{
+    background: black;
+    color: white;
+}
+#bottom{
+    width: 1920px;
+    overflow: hidden;
+    background: greenyellow;
+    margin: 0 auto;
+}
+.wrap{
+    width: 1200px;
+    height: 750px;
+    background: gold;
+    margin: 0 auto;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.wrap:first-child{
+    margin-top: 50px;
+}
+.wrap:nth-child(2){
+    background: blue;
+}
+.wrap:last-child{
+    background: greenyellow;
+}
+.out_box{
+    width: 800px;
+    height: 600px;
+    border: 5px solid black;
+    /* box-sizing: border-box; */
+    margin: 0px auto;
+    
+}
+.in_box{
+    width: 700px;
+    height: 270px;
+    background: blue;
+    margin: 20px 50px;
+}
+.box{
+    width: 220px;
+    height: 270px;
+    background: black;
+    float: left;
+}
+.box_2{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.box_se{
+    width: 700px;
+    height: 270px;
+    /* background: black; */
+    margin: 20px auto;
+    position: relative;   
+}
+label{
+    width: 175px;
+    height: 50px;
+    background: black;
+    display: block;
+    text-align: center;
+    line-height: 50px;  
+    color: white;
+    float: left;
+    
+    }
+.box_se>input{
+    display: none;
+}
+.tab_in_box{
+    width: 700px;
+    height: 200px;
+    background: red;
+    position: absolute;
+    top: 50px;    
+}
+.tab_menu{
+    width: 700px;
+    height: 200px;
+    background: red;
+    display: none;
+    text-align: center;
+    line-height: 200px;
+}
+#tab_menu_2{
+    background: yellow;
+}
+#tab_menu_3{
+    background: purple;
+}
+#tab_menu_4{
+    background: aqua;
+}
+#input_tab_1:checked~.input_label_1{
+    background: red;
+}
+#input_tab_2:checked~.input_label_2{
+    background: yellow;
+}
+#input_tab_3:checked~.input_label_3{
+    background: purple;
+}
+#input_tab_4:checked~.input_label_4{
+    background: aqua;
+}
+#input_tab_1:checked~.tab_in_box>#tab_menu_1{
+    display: block;
+}
+#input_tab_2:checked~.tab_in_box>#tab_menu_2{
+    display: block;
+}
+#input_tab_3:checked~.tab_in_box>#tab_menu_3{
+    display: block;
+}
+#input_tab_4:checked~.tab_in_box>#tab_menu_4{
+    display: block;
+}
+.con_top{
+    width: 700px;
+    height: 50px;
+    background: purple;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 50px;
+}
+.con_bottom{
+    width: 700px;
+    height: 200px;
+    background: hotpink;
+    text-align: center;
+    line-height: 200px;
+    position: absolute;
+    top: 50px;
+    
+    display: none;
+}
+.con_top:hover .con_bottom{
+    display: block;
+}
+.box_th{
+    width: 400px;
+    height: 600px;
+    float: left;
+    background: black;
+    text-align: center;
+    font-size: 50px;
+}
+.box_b{
+    width: 400px;
+    height: 450px;
+    background: red;
+    line-height: 450px;
+}
+.box_s{
+    width: 400px;
+    height: 150px;
+    background: blue;
+    line-height: 150px;
+}
+.box_b:last-child{
+    background: green;
+}
+.box_s:first-child{
+    background: aqua;
+}

@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+#out_box{
+    width: 900px;
+    height: 500px;
+    border: 10px solid black;
+    margin: 0 auto;
+}
+.but{
+    width: 100px;
+    height: 100px;
+    background: black;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    float: left;
+    margin-top: 200px;
+}
+
+.mask_wrap{
+    width: 700px;
+    height: 500px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.move_box{
+    width: 3500px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.img_box{
+    width: 700px;
+    height: 500px;
+    float: left;
+    font-size: 100px;
+    text-align: center;
+    line-height: 500px;
+}

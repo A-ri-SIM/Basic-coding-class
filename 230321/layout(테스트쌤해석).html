@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="layout(테스트쌤해석).css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <nav class="main_menu"> 
+            <div class="top_menu">
+                나는 메뉴1
+            </div>
+            <div class="top_menu">
+                나는 메뉴2
+            </div>
+            <div class="top_menu">
+                나는 메뉴3
+            </div>
+            <div class="top_menu">
+                나는 메뉴4
+            </div>
+        </nav>
+    </header>
+    <section>
+        <article class="out_box">
+            <div class="line_box">
+                <div class="in_out">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="in_out">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+        </article>
+        <article class="out_box">
+            <div class="line_box">
+                <div class="in_out">
+                    <input type="radio" id="tab_input_1" class="display_none "name="tab" checked/>
+                    <input type="radio" id="tab_input_2" class="display_none" name="tab" />
+                    <input type="radio" id="tab_input_3" class="display_none" name="tab" />
+                    <input type="radio" id="tab_input_4" class="display_none" name="tab" />
+                    <label for="tab_input_1" class="tab_label">탭메뉴1</label>
+                    <label for="tab_input_2" class="tab_label">탭메뉴2</label>
+                    <label for="tab_input_3" class="tab_label">탭메뉴3</label>
+                    <label for="tab_input_4" class="tab_label">탭메뉴4</label>
+                    <div id="tab_con_wrap">
+                        <div class="tab_con display_none">1</div>
+                        <div class="tab_con display_none">2</div>
+                        <div class="tab_con display_none">3</div>
+                        <div class="tab_con display_none">4</div>
+                    </div>
+                </div>
+                <div class="in_out">
+                    <input type="checkbox" class="display_none" id="ch_input"/>
+                    <label for="ch_input" id="ch_label">숨김메뉴</label>
+                    <div class="tab_con display_none" id="ch_con">숨었다 보였다</div>
+                </div>
+            </div>
+        </article>
+        <article class="line_box">
+            <div class="big_box">왼쪽1</div>
+            <div class="small_box">오른쪽2</div>
+            <div class="small_box">왼쪽3</div>
+            <div class="big_box">오른쪽4</div>
+
+            <!-- float 활용순서 -->
+            <!-- <div class="big_box">오른쪽3</div> -->
+            <!-- <div class="small_box" id="s_box">왼쪽4</div> -->
+        </article>
+    </section>
+
+</body>
+</html>

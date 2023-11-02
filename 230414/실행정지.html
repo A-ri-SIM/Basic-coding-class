@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 시간함수 정지
+            // =>setTimeout();
+            // =>일정 시간 이후 한번 실행
+            // =>clearTimeout(타이머함수명);
+
+            // =>setInterval()
+            // =>일정 시간 간격으로 반복 실행
+            // =>clearInterval(타이머함수명);
+
+            // =>자동실행됨
+            // =>익명함수형식
+            // let t_f=타이머함수
+            // =>타이머함수를 저장한 변수가 타이머함수명
+
+
+            let setInterval_f=setInterval(function(){
+                document.write("10분쉬자");
+            },1000);
+
+            setTimeout(function(){
+                clearInterval(setInterval_f);
+            },5000);
+
+
+        });//끝
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .out_box{
+            width: 1200px;
+            height: 800px;
+            border: 10px solid black;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .menu_wrap{
+            width: 1200px;
+            height: 100px;
+        }
+        .menu{
+            width: 300px;
+            height: 100px;
+            font-size: 30px;
+            line-height: 100px;
+            float: left;
+            background: aqua;
+        }
+        .info_wrap{
+            width: 1200px;
+            height: 700px;
+            overflow: hidden;
+            position: relative;
+        }
+        .info{
+            width: 1200px;
+            height: 700px;
+            font-size: 30px;
+            line-height: 700px;
+            display: none;
+            position: absolute;
+        }
+        .info:first-child{
+            display: block;
+        }
+        .on{
+            background: navy;
+            color: white;
+            font-weight: 900;
+        }
+
+    </style>
+
+    <script src="jquery-3.6.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            let bg=["#ff0000","#00ff00","#0000ff","#ffff00"];
+            $(".info").css({
+                background:function(index){
+                    return bg[index]
+                }
+            });
+            $(".menu").click(function(){
+                let menu_index=$(this).index();
+                //alert(menu_index);
+                //menu_index와 동일한 순서의 info를 선택 fadeIn(500)
+                
+                $(".info").fadeOut(500);
+                $(".info").eq(menu_index).fadeIn(500);
+                $(".menu").removeClass("on",200);
+                $(this).addClass("on",500);
+            })
+
+        });//끝
+    </script>
+</head>
+<body>
+    <div class="out_box">
+        <div class="menu_wrap">
+            <div class="menu on">Tab Menu_01</div>
+            <div class="menu">Tab Menu_02</div>
+            <div class="menu">Tab Menu_03</div>
+            <div class="menu">Tab Menu_04</div>
+        </div>
+        <div class="info_wrap">
+            <div class="info">Tab Menu_01 내용</div>
+            <div class="info">Tab Menu_02 내용</div>
+            <div class="info">Tab Menu_03 내용</div>
+            <div class="info">Tab Menu_04 내용</div>
+        </div>
+    </div>
+</body>
+</html>

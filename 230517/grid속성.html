@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            width: 90%;
+            /* overflow: hidden; */
+            height: 90vw;
+            margin: 0 auto;
+            background: lawngreen;
+            display: grid;
+            /* =>부모요소에 삽입
+            =>테이블 작성(표) */
+            grid-template-columns: 25% 25% 25% 25%;
+            /* =>가로칸의 갯수와 크기값 */
+            grid-template-rows: 20% 30% 40% 10%;
+        }
+        .wrap>div{
+            margin: 5px;
+        }
+        .grid_1{
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background: lightcoral;
+            grid-template-columns: 25% 25% 25% 25%;
+            /* =>가로칸의 갯수와 크기값 */
+            grid-template-rows: 20% 30% 40% 10%;
+        }
+        .box{
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            background: white;
+        }
+        .grid_2{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2; 
+            grid-row-end: 3;
+            background: lightcyan;
+        }
+        .grid_3{
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            background: lightsalmon;
+        }
+        .grid_4{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            background: lightgreen;
+        }
+        .grid_5{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            background: lightseagreen;
+        }
+        .grid_6{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            background: lightslategray;
+        }
+        .grid_7{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            background: lightyellow;
+        }
+        .grid_8{
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            background: lightskyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="grid_1">1 </div>
+        <div class="grid_2">2</div>
+        <div class="grid_3">3</div>
+        <div class="grid_4">4</div>
+        <div class="grid_5">5</div>
+        <div class="grid_6">6</div>
+        <div class="grid_7">7</div>
+        <div class="grid_8">8</div>
+    </div>
+</body>
+</html>

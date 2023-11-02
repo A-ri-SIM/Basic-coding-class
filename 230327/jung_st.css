@@ -1,0 +1,491 @@
+/* 1.초기화
+-여백없애기 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* -ul,li 리스트 스타일 */
+ul,li{
+    list-style: none;
+}
+/* -a링크 텍스트 관련 스타일지정 */
+a{
+    color: #333333;
+    text-decoration: none;
+}
+/* -img 부모의 크기값 맞춤 */
+/* % 단위값은 부모 크기값이 기준 */
+img{
+    width: 100%;
+}
+
+/* 2.클래스 형식으로 통합 스타일지정 */
+.first_wrap_bg{
+    background: red;
+}
+.sec_wrap_bg{
+    background: lightcoral;
+}
+/* 헤더영역 */
+/* 텍스트
+- 텍스트 크기 지정
+- 텍스트 가로세로 중앙 정렬
+- 텍스트 굵기 설정 */
+
+/* header스타일
+- 가로크기 1760
+- 세로 50
+- 중앙정렬 */
+header{
+    width: 1760px;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+}
+.logo,.main_menu_wrap,.login_menu_wrap{
+    position: absolute;
+    top:0;
+}
+/* 로고영역 */
+/* logo */
+/* -가로 크기 95
+-세로크기 50
+-왼쪽정렬(flaot,position) */
+.logo{
+    width: 95px;
+    height: 50px;
+    /* 1.float값사용
+    => 내가 float이면 
+    내 형제는 모두 float여야지 
+    서로 크기를 인식함 */
+    /* float: left; */
+    /* 2.float 지정
+    =>메뉴의 위치값 지정 */
+    /* float: left; */
+    left: 0;
+}
+
+/* 메인메뉴영역 */
+/* main_menu_wrap */
+/* -가로 크기 800
+-세로크기 50
+-중앙정렬(margin, position)  */
+.main_menu_wrap{
+    width: 800px;
+    height: 50px;
+    /* 1.margin사용
+    =>float가 있는 형제가 있을때
+    =>뒤에 있는 형제가 튕김 */
+    /* margin: 0 auto; */
+    /* position: relative; */
+    /* =>내가 있는 위치 그대로 
+    왼쪽 상단이 0,0 기준 */
+    /* position: absolute; */
+    /* =>내가 position: absolute이면
+    내 부모의 왼쪽 상단점을 0,0 인식함
+    =>부모에게 position값 지정해야함 */
+    /* top:0; */
+    left: 50%;
+    margin-left: -400px;
+}
+/* top_menu 영역 */
+/* 가로 크기 200
+세로크기 50
+텍스트 가로세로 중앙
+텍스트 크기 16px */
+.top_menu{
+    width: 200px;
+    height: 50px;
+    /* padding: 0px 50px; */
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    float: left;
+    
+}
+/* top_menu에 마우스를 올리면 배경색과 텍스트 색 변경 */
+.top_menu:hover{
+    background: blue;
+}
+.top_menu:hover>a{
+    color: white;
+}
+
+
+/* 로그인메뉴영역 */
+/* login_menu_wrap */
+/* -가로 크기 180
+-세로크기 50
+-오른쪽 정렬(float,position) */
+.login_menu_wrap{
+    width:180px;
+    height: 50px;
+    /* float: right; */
+    /* margin-top: -50px; */
+    right: 0;
+}
+.login_menu{
+    width: 60px;
+    height: 50px;
+    float: left;
+    background: greenyellow;
+    font-size: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+.toggle_menu{
+    position: relative;
+}
+#toggle_input{
+    display: none;
+}
+.toggle_label{
+    display: block;
+    width: 60px;
+    height: 50px;
+    background-image: url(img/toggle.png);
+    background-size: 100% 100%;
+    /* =>background-size: 100%; 가로이미지 영역 크기에 맞춤
+    =>background-size: 100% 100%;가로 세로 영역 크기에 맞춤 */
+    background-repeat: no-repeat;
+}
+#toggle_con{
+    width: 800px;
+    height: 800px;
+    background: black;
+    position: absolute;
+    top:50px;
+    left: -800px;
+    display: none;
+    z-index: 999999;
+}
+#toggle_input:checked~#toggle_con{
+    display: block;
+}
+#toggle_input:checked~.toggle_label{
+    background-image: url(img/toggle_h.png);
+}
+
+
+
+
+/* 메인배너영역 */
+/* - 가로크기 1920
+- 세로크기 830
+- 가로 중앙 지정 */
+.main_banner_wrap{
+    width: 1920px;
+    height: 830px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 텍스트영역 */
+/* - 가로크기 600
+- 세로크기 450
+- 중앙에서 왼쪽으로 200 만큼 이동(position)
+- 세로 중앙위치 설정(position) */
+.main_banner_text_wrap{
+    width: 600px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -225px;
+    margin-left: -800px;
+    color: white;
+}
+.big_title{
+font-size: 95px;
+font-weight: 900;
+/* background: greenyellow; */
+}
+.con_text{
+    font-size: 20px;
+    /* background: lightblue; */
+    line-height: 30px;
+}
+.con_text:nth-child(3){
+    margin-top: 30px;
+}
+.view_more_but{
+    width: 300px;
+    height: 50px;
+    background: white;
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+
+
+/* 배너메뉴영역 */
+/* - 가로크기 80
+- 세로크기 400
+- 중앙에서  오른쪽으로 800 만큼 이동(position)
+- 세로 중앙 위치 설정(position) */
+.main_banner_menu_wrap{
+    width: 80px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: 840px;
+    padding-top: 10px;
+    /* padding-left: 10px; */
+}
+.banner_in_menu{
+    width: 80px;
+    height: 100px;
+    background: white;
+    text-align: center;
+    padding-top: 10px;
+    border-bottom: 1px solid gray;
+    /* padding-left: 10px; */
+    
+}
+.banner_in_menu:nth-child(1){
+    border-radius: 10px 10px 0 0;
+}
+.banner_in_menu:nth-child(3){
+    border-radius:   0 0 10px 10px;
+}
+.banner_in_menu>img{
+    width: 50%;
+    
+}
+.ico_text{
+    font-size: 12px;
+    text-align: center;
+    line-height: 12px;
+    font-weight: 500;
+}
+.scroll_box{
+    width: 80px;
+    height: 100px;
+    text-align: center;
+  padding-top: 50px;
+}
+.scroll_box>img{
+    width: 80%;
+   /* position: relative;
+   top: 50px; */
+   /* margin-top: 50px; */
+
+}
+
+
+
+
+
+/* 섹션영역 */
+ /* - 가로크기 1330
+ - 세로크기 자식맞춤
+ - 중앙에서 위치 설정 왼쪽으로 가기
+ 1760 크기 안에서 사이드영역과 70여백두고 위치(position) */
+section{
+    width: 1330px;
+    overflow: hidden;
+    /* position: absolute; */
+    /* top:980px; */
+    position: relative;
+    top:100px;
+    left: 50%;
+    margin-left: -880px;
+   
+}
+section.first_wrap_bg{
+    background: khaki;
+}
+article{
+    width: 1330px;
+    margin-bottom: 50px;
+}
+ 
+
+/* 섹션과 메인 배너 사이 여백 100
+섹션과 푸터 사이 여백 100
+article 사이 여백 50 */
+/* 브랜드배너영역 */
+/* -세로크기 530 */
+.brand_banner_wrap{
+    height: 530px;
+    /* 배너의 마스크 영역 */
+    overflow: hidden;
+    position: relative;
+
+}
+#img_move_box{
+    width: 5320px;
+    /* img_box 하나의 가로 크기 1330px
+    img_box(1330)*4=5320 */
+    position: absolute;
+    top: 0;
+}
+.img_box{
+    width: 1330px;
+    height: 530px;
+    float: left;
+    /* 배경이미지는 각 img_box를 삽입해야함 */
+}
+.brand_num{
+    text-align: center;
+    /* line-height: 100px; */
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 100px;
+}
+.brand_name{
+    text-align: center;
+    line-height: 150px;
+    font-size: 80px;
+    font-weight: 700;
+}
+.brand_info{
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.brand_view_more{
+    width: 200px;
+    height: 50px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 50px auto;
+}
+
+#banner_but_wrap{
+    width: 320px;
+    height: 20px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -160px;
+}
+.but{
+    width: 50px;
+    height: 10px;
+    border: 1px solid white;
+    float: left;
+    margin-right: 30px;
+    box-sizing: border-box;
+}
+
+
+
+
+/* 기업이념영역 */
+/* -세로크기 530 */
+.busines_idea{
+    height: 530px;
+}
+/* R&D 활동 영역 */
+/* -세로크기 420 */
+.rnd_act{
+    height: 420px;
+}
+
+/* 베지밀 영유아식 */
+/* -세로크기 420 */
+.kids_pro{
+    height: 420px;
+}
+
+/* 레시피영역 */
+/* -세로크기 1260 */
+.racipe_wrap{
+    height: 1260px;
+}
+
+/* 베스트상품영역 */
+/* -세로크기 960 */
+.best_pro{
+    height: 960px;
+}
+
+/* 제품음용후기영역 */
+/* -세로크기 620 */
+.pro_memo{
+    height: 620px;
+}
+
+/* 맛있고 건강한 레시피 영역 */
+/* -세로크기 780 */
+.good_racipe{
+    height: 780px;
+}
+
+/* 정보안내영역(웹진+sns+이용안내) */
+/* -세로크기 500 */
+.web_info{
+    height: 500px;
+}
+/* 푸터영역 */
+/* -가로크기 1920
+-세로크기 자식맞춤
+-아래 여백 200 추가 */
+footer{
+    width: 1920px;
+    margin: 100px auto;
+    overflow: hidden;
+    margin-bottom: 200px;
+    
+}
+
+/* 풀메뉴영역 */
+/* 사이트정보영역 */
+/* 가로크기 1760
+세로 300
+중앙정렬
+세로 부모와 50 사이 여백 */
+.in_footer_wrap{
+    width: 1760px;
+    height: 300px;
+    margin: 50px auto;
+}
+/* 사이드영역 */
+/* - 가로크기 360
+ - 세로크기 900
+ - 중앙에서 위치 설정 오른쪽으로 가기
+ 1760 크기 안에서 센셕영역과 70여백두고 위치
+ - 항상 위치 고정(position) */
+aside{
+    width: 360px;
+    height: 900px;
+    position: fixed;
+    top:980px;
+    left: 50%;
+    margin-left: 520px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+
+/* 정식품 브랜드 */
+/* 부모와 사이 여백 30
+여백 빼고 가로크기
+세로 전체 카테고리와 사이 여백 30 빼고
+정식품 브랜드 전체 카테고리 세로크기 동일 */
+/* 전체카테고리 */
+/* 부모와 사이 여백 30
+여백 빼고 가로크기
+세로 전체 카테고리와 사이 여백 30 빼고
+정식품 브랜드 전체 카테고리 세로크기 동일 */
+.aside_brand_wrap,.aside_all_category{
+/* width: 100%; */
+height: 405px;
+}
+.aside_brand_wrap{
+    margin-bottom: 30px;
+}

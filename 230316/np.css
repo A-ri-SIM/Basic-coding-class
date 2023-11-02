@@ -1,0 +1,232 @@
+/* 1.초기화 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* header영역 */
+header{
+    width: 1920px;
+    height: 150px;
+    background: goldenrod;
+    margin: 0 auto;
+}
+/* top_header영역 */
+.top_header{
+    width: 1220px;
+    height: 80px;
+    background: lightcoral;
+    margin: 0 auto;
+}
+/* logo영역 */
+.main_logo{
+    width: 200px;
+    height: 80px;
+    float: left;
+    background:red;
+}
+/* search_menu영역 */
+.search_menu{
+    width: 650px;
+    height: 50px;
+    float: right;
+    background:seagreen;
+}
+
+/* bottom_header영역 */
+.bottom_header{
+    width: 1920px;
+    height: 70px;
+    background: green;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    box-sizing: border-box;
+}
+
+/* main_menu영역 */
+.main_menu{
+    width: 1220px;
+    height: 70px;
+    background: gold;
+    margin: 0 auto;
+}
+/* top_section영역 */
+.top_section,footer{
+    width: 1220px;
+    background: seagreen;
+    margin: 50px auto;
+    overflow: hidden;
+}
+/* main_con영역 */
+    /* con_wrap로 공통영역 */
+    .con_wrap{
+        width: 1220px;
+        overflow: hidden;
+        background: lightblue;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    /* main_con_1영역 */
+    /* top_main_banner_mask */
+    .top_main_banner_mask{
+        width: 890px;
+        height: 250px;
+        background: lightpink;
+        float: left;
+    }
+    /* top_main_service */
+    .top_main_service{
+        width: 300px;
+        height: 250px;
+        background: lightsteelblue;
+        float: right;
+    }
+/* main_con_2 */
+    .main_con_2{
+        height: 250px;
+    }
+    /* personal_service */
+    .personal_service{
+        width: 1000px;
+        height: 250px;
+        background: lightblue;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    /*  work_service */
+    .work_service{
+        width: 280px;
+        height: 250px;
+        background: lightsalmon;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+/* main_con_3 */
+    .main_con_3{
+        height: 250px;
+    }
+/* info_tab_menu */
+    .info_tab_menu{
+        width: 400px;
+        height: 50px;
+        background: lightcoral;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+/* info_tab_right_menu */
+    .info_tab_right_menu{
+        width: 200px;
+        height: 50px;
+        background: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+/* info_tab_con */
+    .info_tab_con{
+        width: 1220px;
+        height: 150px;
+        background: lightgray;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+/* main_con_4 */
+/* 팝업존 */
+/* pop_up */
+    .pop-up{
+        width: 640px;
+        height: 200px;
+        background: lightskyblue;
+        float: left;
+    }
+
+/* 사회관계망서비스 */
+/* sns_wrap */
+    .sns_wrap{
+        width: 550px;
+        height: 200px;
+        background: darkolivegreen;
+        float: right;
+    }
+
+    /* bottom_sectio 영역 */
+    .bottom_section{
+        width: 1920px;
+        overflow: hidden;
+        background: gray;
+        margin: 0 auto;
+    }
+    .in_bottom_section{
+        width: 1220px;
+        overflow: hidden;
+        background: seagreen;
+        margin: 0 auto;
+        /* =>top_section 스타일에 추가선택자(,)삽입하여 스타일 작성 가능 */
+    }
+    /* 공단소개 및 통계+알기쉬운 국민연금 */
+    /* 공단소개 및 통계 */
+    .intro_wrap{
+        width: 595px;
+        height: 500px;
+        float: left;
+        background: wheat;
+    }
+    /* 알기쉬운 국민연금 */
+    .easy_wrap{
+        width: 595px;
+        height: 500px;
+        float: right;
+        background: wheat;
+    }
+    /* 게시판 영역 */
+    .main_con_6{
+        height: 300px;
+    }
+    
+    /* 장앤인&복지서비스 영역 */
+    .qna_1,.qna_2,.qna_3{
+        width: 430px;
+        height: 300px;
+        position: absolute;
+        top: 0; 
+    }
+    .qna_1{
+        left: 0;
+        /* 왼쪽위치설정 */
+        background: green;
+    }
+    /* 국민연금 100문 100답 영역 */
+    .qna_2{
+        left: 50%;
+        margin-left: -215px;
+        /* =>가로중앙정렬
+        =>left: 50%;, margin-left:-(가로크기/2) */
+        background: skyblue;
+    }
+    /* 권리구제제도안내 영역 */
+    .qna_3{
+        right: 0;
+        /* 오른쪽위치설정 */
+        background: rgb(246, 132, 71);
+    }
+    /* 뉴스 영역 */
+    .news_1,.news_2,.news_3{
+        width: 376px;
+        height: 600px;
+        background: darkorange;
+        float: left;
+        /* margin-right: 43px; */
+    }
+    /* 국민연금 on air 포함 영역 */
+    /* 영상뉴스 영역 */
+    .news_2{
+        margin: 0 43px;
+    }
+    /* footer 영역 */
+footer{
+    height: 300px;
+}

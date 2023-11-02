@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #out_box{
+            width: 800px;
+            height: 600px;
+            border: 10px solid black;
+            /* display: block; */
+            /* =>display 속성 자기의 형식을 변경하기 위해 사용함
+            - block
+            --> 가로세로 크기값 있음
+            --> 기본 세로 정렬값
+            --> 초기화에서 전체 여백 제거시 지정하지 않은 여백제거됨
+            - inline
+            -->가로세로 크기 없음
+            -->내용에 맞춤 크기값
+            -->가로 정렬값
+            -->초기화에서 제거되지 않는 여백값 있음
+            - inline-block
+            -->가로세로 크기값 있음
+            -->가로 정렬값 */
+
+            display: flex;
+            /* 자식의 가로정렬을 위해 부모값에 지정 */
+            /* 플렉서브 박스:부모박스
+            =>부모박스에 자식의 가변 속성 지정함
+            플렉스아이템:자식박스 */
+
+            /* 자식박스의 방향설정 */
+            /* flex-direction: row; */
+            /* 자식 박스를 여러줄 배치형식, 한줄 배치 형식 설정 */
+            /* flex-wrap: wrap; */
+            /* 방향설정+줄형식 한번에 지정 */
+            /* flex-flow: row nowrap; */
+            /* justify-content: space-around;
+            =>자식 박스의 정렬 위치
+            =>flex-start:왼쪽 정렬
+            =>flex_end:오른쪽 정렬(순서변경없음)
+            =>center:객체 양쪽으로 여백지정 후 가눙데 정렬
+            =>space-between:양쪽여백없이 객체사이 여백정렬
+            =>space-around:양쪽여백있고 객체사이 여백 */
+            /* align-items: baseline; */
+            /* =>세로형식지정 */
+            /* order: 정렬 순서값 변경 속성
+            =>z-index는 겹져지는 순서값
+            =>자식박스 순서
+            =>자식박스에 지정 */
+            
+        }
+        .in_box{
+            /* width: 200px;
+            height: 200px; */
+            width: 30%;
+            /* height: 50%; */
+            background: red;
+            border: 5px solid blue;
+            box-sizing: border-box;
+            font-size: 100px;
+            text-align: center;
+            /* float
+            =>정렬이 되는 자기 자신에게 삽입하는 속성 */
+            
+        }
+        /* .in_box:first-child{
+            order: 3;
+        }
+        .in_box:nth-child(2){
+            order: 3;
+        } */
+
+    </style>
+</head>
+<body>
+    <div id="out_box">
+        <div class="in_box">1</div>
+        <div class="in_box">2</div>
+        <div class="in_box">3</div>
+        <!-- <div class="in_box">4</div> -->
+    </div>
+</body>
+</html>

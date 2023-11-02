@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li{
+            list-style: none;
+        }
+        .wrap{
+            width: 1040px;
+            height: 50px;
+            border: 10px solid black;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            margin: 0 auto;
+        }
+        .top_menu{
+            width: 200px;
+            height: 50px;
+            background: yellow;
+            border: 2px solid green;
+            box-sizing: border-box;
+            float: left;
+            margin-right: 10px;
+            
+        }
+        .top_menu:last-child{
+            margin-right: 0;
+        }
+        .bottom_wrap{
+            width: 200px;
+            height: 0px;
+            background: green;
+            color: white;
+            overflow: hidden;
+        }
+        .bottom_menu{
+            width: 200px;
+            height: 50px;
+            border-bottom: 1px solid black;
+            box-sizing: border-box;
+        }
+        
+        /* .top_menu:hover .bottom_wrap{
+            display: block;
+        }
+        .bottom_menu:hover{
+            background: yellow;
+            color: black;
+        } */
+        .top_menu_on{
+            background: green;
+            color: white;
+        }
+        .menu_on{
+            height: 150px;
+        }
+        .bottom_on{
+            background: yellow;
+            color: black;
+        }
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".top_menu").hover(function(){
+                $(this).addClass("top_menu_on",200)
+                $(".bottom_wrap",this).addClass("menu_on",200);
+            },function(){
+                $(this).removeClass("top_menu_on",200)
+                $(".bottom_wrap",this).removeClass("menu_on",200);
+            });
+        $(".bottom_menu").hover(function(){
+            $(this).addClass("bottom_on");
+        },function(){
+            $(this).removeClass("bottom_on");
+        });
+        });//끝
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="top_menu">상위메뉴
+            <ul class="bottom_wrap">
+                <li class="bottom_menu">하위메뉴1</li>
+                <li class="bottom_menu">하위메뉴2</li>
+                <li class="bottom_menu">하위메뉴3</li>
+            </ul>
+        </div>
+        <div class="top_menu">상위메뉴
+            <ul class="bottom_wrap">
+                <li class="bottom_menu">하위메뉴1</li>
+                <li class="bottom_menu">하위메뉴2</li>
+                <li class="bottom_menu">하위메뉴3</li>
+            </ul>
+        </div>
+        <div class="top_menu">상위메뉴
+            <ul class="bottom_wrap">
+                <li class="bottom_menu">하위메뉴1</li>
+                <li class="bottom_menu">하위메뉴2</li>
+                <li class="bottom_menu">하위메뉴3</li>
+            </ul>
+        </div>
+        <div class="top_menu">상위메뉴
+            <ul class="bottom_wrap">
+                <li class="bottom_menu">하위메뉴1</li>
+                <li class="bottom_menu">하위메뉴2</li>
+                <li class="bottom_menu">하위메뉴3</li>
+            </ul>
+        </div>
+        <div class="top_menu">상위메뉴
+            <ul class="bottom_wrap">
+                <li class="bottom_menu">하위메뉴1</li>
+                <li class="bottom_menu">하위메뉴2</li>
+                <li class="bottom_menu">하위메뉴3</li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>

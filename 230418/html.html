@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 20px;
+        }
+        span{
+            font-size: 30px;
+        }
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("div").html("<h1>변경후</h1>");
+            });
+        $("div").click(function(){
+            let in_html=$(this).html();
+            alert(in_html);
+        });
+
+
+        });//끝
+    </script>
+</head>
+<body>
+    <button>태그구조 바꾸기</button>
+    <div>
+        <span>변경전~</span>
+    </div>
+</body>
+</html>

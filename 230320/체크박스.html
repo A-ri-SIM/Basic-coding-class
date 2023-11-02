@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 1.input태그 보이지 않음
+        2.연결되는 label을 체크함
+        3.크기가 없는 inline형식 => block형식으로 변경
+        4.menu_con은 보이지 않음
+        5.menu_con은 체크박스가 체크되면 보임 */
+        #to_menu{
+            display: none;
+        }
+        #ch_label{
+            width: 100px;
+            height: 100px;
+            border: 5px solid black;
+            display: block;
+            text-align: center;
+            line-height: 100px;
+            font-size: 100px;
+            font-weight: 900px;
+            /* position: relative;
+            =>position값 지정 */
+        }
+        #menu_con{
+            width: 500px;
+            height: 500px;
+            background: red;
+            /* position: absolute;
+            =>position값 지정
+            =>z-index: 99999999; */
+            display: none;
+        }
+
+
+        #to_menu:checked~#menu_con{
+          display: block;
+        }
+        /* =>기준선택자~(뒤에)객체선택 */
+    </style>
+</head>
+<body>
+    <!-- <input type="checkbox" id="ch_input"/>
+    <label for="ch_input"> input태그와 연결된 내용</label> -->
+    <!-- <label>
+        내용
+        <input type="checkbox" id="ch_input"/>
+    </label> -->
+    <input type="checkbox" id="to_menu" />
+    <label for="to_menu" id="ch_label">=</label>
+    <div id="menu_con">
+        체크박스를 클릭하면 보여지는 영역
+    </div>
+</body>
+</html>

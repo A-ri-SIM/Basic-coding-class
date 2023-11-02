@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* 1. 초기화
+      => 전체 블럭형식 태그에 삽입되어 있는 기본 여백을 제거 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 2. 목록태그 스타일도 제거
+        ul,li{
+            list-style : none;
+        }
+        3. 이미지의 크기 기본 설정
+        img{
+            width: 100%;
+        }
+        4. a태그의 스타일 제거
+        a{
+            text-decoration: none;
+            color: #333;
+        } */
+        #warp{
+            width: 1200px;
+            height: 900px;
+            border: 10px solid black;
+            /* 1.중앙정령 객체의 가로크기 설정 */
+            margin: 0 auto;
+        }
+        /* 1. 크기값 맞추기 */
+        .con_box{
+            width: 1100px;
+            border: 10px solid blue;
+            box-sizing: border-box;
+            /* margin-bottom: 50px; */
+            /* margin-top: 50px;
+            margin-left: 50px; */
+            margin: 50px auto;
+
+
+        }
+        /* 형제 순서 선택자 */
+        /* => 기준 부모안에서의 순서값 */
+        /* .con_box:nth-child(1){
+            height: 150px;
+        } */
+        .con_box:first-child{
+            height: 150px;
+            /* margin-top: 50px; */
+        }
+        .con_box:nth-child(2){
+            height: 350px;
+        }
+        /* .con_box:nth-child(3){
+            height: 200px;
+        } */
+        .con_box:last-child{
+            height: 200px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- 부모1개 자식3개 -->
+ <div id="warp">
+    <div class="con_box"></div>
+    <div class="con_box"></div>
+    <div class="con_box"></div>
+ </div>   
+
+
+
+
+</body>
+</html>

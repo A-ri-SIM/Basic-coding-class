@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .mask{
+            position: fixed;
+            /* position: relative;
+            overflow: hidden; */
+        }
+        .move_box{
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+        }
+        .width_box>.box{
+            float: left;
+        }
+        .box{
+            text-align: center;
+            font-size: 100px;
+            position: relative;
+        }
+
+        .but{
+            width: 50px;
+            height: 50px;
+            font-size: 50px;
+            font-weight: 1000;
+            line-height: 50px;
+            position: absolute;
+        }
+        .down_but,.up_but{
+            left: 50%;
+            margin-left: -25px;
+        }
+        .down_but{
+            bottom: 0;
+            transform: rotate(90deg);
+        }
+        .up_but{
+            top: 0;
+            transform: rotate(-90deg);
+        }
+        .right_but_1,.right_but_2,.left_but_1,.left_but_2,.home_but{
+            top: 50%;
+            margin-top: -25px;
+        }
+        .right_but_1,.right_but_2,.home_but{
+            right: 0;
+        }
+        .left_but_1,.left_but_2{
+            left: 0;
+            transform: rotate(-180deg);
+        }
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            let ww=$(window).width();
+            let wh=$(window).height();
+            $(".mask,.box").css({
+                width:ww,
+                height:wh
+            })
+            $(".move_box").css({
+                width:ww*3,
+                height:wh*2
+            })
+            $(".width_box").css({
+                width:ww*3,
+                height:wh
+            })
+            
+    
+            let bg=["red","blue","green","orange"]
+            $(".box").css({
+                background:function(index){
+                    return bg[index]
+                },
+                lineHeight:wh+"px"
+            })
+            $(".down_but").click(function(){
+                $(".move_box").animate({
+                    top:-wh
+                },500)
+            })
+            $(".up_but").click(function(){
+                $(".move_box").animate({
+                    top:0
+                },500)
+            })
+            $(".right_but_1").click(function(){
+                $(".move_box").animate({
+                    left:-ww
+                },500)
+            })
+            $(".left_but_1").click(function(){
+                $(".move_box").animate({
+                    left:0
+                },500)
+            })
+            $(".right_but_2").click(function(){
+                $(".move_box").animate({
+                    left:-ww*2
+                },500)
+            })
+            $(".left_but_2").click(function(){
+                $(".move_box").animate({
+                    left:-ww
+                },500)
+            })
+            $(".home_but").click(function(){
+                $(".move_box").animate({
+                    top:0,
+                    left:0
+                },500)
+            })
+
+        });//끝
+    </script>
+</head>
+<body>
+    <div class="mask">
+        <div class="move_box">
+            <div class="box">
+                <h1>MAIN</h1>
+                <div class="but down_but">></div>
+            </div>
+            <div class="width_box">
+                <div class="box">
+                    <h1>PAGE_1</h1>
+                    <div class="but up_but">></div>
+                    <div class="but right_but_1">></div>
+                </div>
+                <div class="box">
+                    <h1>PAGE_2</h1>
+                    <div class="but left_but_1">></div>
+                    <div class="but right_but_2">></div>
+                </div>
+                <div class="box">
+                    <h1>PAGE_3</h1>
+                    <div class="but left_but_2">></div>
+                    <div class="but home_but">H</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

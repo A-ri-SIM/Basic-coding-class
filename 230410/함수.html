@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 함수
+        // =>반복되는 행동식을(명령) 그룹화해서 관리 하는 것
+        // 명령() => 함수
+        // 1.함수 정의
+        // -선언적 함수 : 이름이 있는 함수
+        // -익명함수 : 이름이 없는 함수 =>변수에 저장해서 사용
+        // 2.함수 호출
+        // -선언적 함수 => 함수명();
+        // -익명 함수 => 변수명();
+        // f(x)=x*x;
+        // f(3)=? => 9
+        // prompt("","");
+        // document.write();
+
+
+        // f(매개변수,매개변수....)
+        // =>매개변수 => 입력값(함수 내부사용)
+        // => return 
+        // => 함수 내부에서 밖으로 함수의 결과값을 넘겨주는 명령
+
+    // function 함수명(매개변수,매개변수..){
+    //     반복하는 실행식
+    //     => 함수 호출시 실행되는 실행식 
+    // }
+    // => 선언적 함수의 기본 형식
+
+    // let 나는함수저장(변수명)=function (매개변수,매개변수..){
+    //    함수 호출시 실행되는 실행식
+    // }
+    // =>익명함수의 기본형식
+
+    // 함수호출
+    // => 함수명(변수명)();
+
+    // function print_f(){
+    //     document.write("선언적 함수");
+    // }
+    // print_f();
+    // print_f();
+    // print_f();
+    // print_f();
+    // print_f();
+
+    // for(let a=1;a<=5;a++){
+    //     print_f();
+    //     document.write("<br>")
+    // }
+
+    // let f_print=function(){
+    //     document.write("익명함수");
+    // }
+    // f_print();
+
+    // sum_f(); //=> 선언적 함수 호출
+    // f_sum(); //=> 익명 함수 호출
+
+    //선언적함수 정의
+    // => 정의 순서 크게 상관없음
+    // =>순서상 호출 하고 정의를 해도됨
+    // function sum_f(){
+    //     document.write("선언적함수<br>");
+    // }
+    // 익명함수의 정의
+    // =>변수에 저장해서 사용하므로
+    // =>호출전 정의해야함
+    // let f_sum=function(){
+    //     document.write("익명함수<br>");
+    // }
+
+    // function sum(a){
+    //     document.write("매개변수 출력 ",a);
+    // }
+    // sum(3);
+    // 입력받은 값을 매개변수로 사용하여
+    // 입력받은 값을 출력하기
+    // function sum(a){
+    //     document.write("매개변수 출력 ",a);
+    // }
+    // sum(prompt("숫자를 입력해주세요.",""));
+    // 풀이
+    // let in_num=Number(prompt("숫자입력",""))
+    // function in_f(a){
+    //     document.write(a);
+    // }
+    // in_f(in_num);
+
+    let a=Number(prompt("단입력",""));
+    function dan(i){
+        for(let b=1;b<10;b++){
+            document.write(`${i}X${b}=${i*b}<br>`)
+        }
+    }
+    dan(a);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

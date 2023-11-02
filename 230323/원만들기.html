@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{ */
+            /* width: 500px;
+            height: 500px; */
+            /* 정원 만들기
+            => 정사각형일때 객체의 크기 1/2값을 border-radius로 지정시 */
+            /* width: 500px;
+            height: 200px; */
+            /* width: 200px;
+            height: 500px; */
+            /* =>직사각형일때 border-radius값의 기준은 작은 크기값 1/2 */
+            /* width: 500px;
+            height: 500px;
+            border: 10px solid black;
+            box-sizing: border-box; */
+            /* border-radius: 500px */
+            /* =>전체 동일한 값 지정 */
+            /* border-radius: 250px 0px; */
+            /* =>왼쪽상단+오른쪽하단 오른쪽상단+왼쪽하단 */
+            /* border-radius: 50px 250px 100px 500px; */
+            /* =>왼쪽상단 오른쪽상단 오른쪽하단 왼쪽하단 */
+        /* } */
+        #out_box{
+            width: 300px;
+            height: 300px;
+            background: black;
+            border-radius: 150px;
+            /* position: relative; */
+            padding: 50px;
+        }
+        #in_out{
+            width: 120px;
+            height: 120px;
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -60px;
+            margin-left: -60px; */
+            /* background: red; */
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            background: white;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        /* .box:nth-child(2),.box:nth-child(4){
+            margin-right: 0;
+        } */
+        .box:nth-child(2n){
+            margin-right: 0;
+        }
+    
+    </style>
+</head>
+<body>
+    <!-- 원만들기 -->
+    <!-- <div>
+        원
+    </div> -->
+    <!-- 전체 원 부모박스 -->
+    <div id="out_box">
+        <!-- 정렬위한 부모박스 -->
+        <div id="in_out">
+            <!-- 각 4개의 박스 -->
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

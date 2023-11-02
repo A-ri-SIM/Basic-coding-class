@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .out_box{
+            border: 10px solid black;
+            background: lightcoral;
+        }
+        .in_box{
+            background: aqua;
+        }
+        #px_out{
+            width: 500px;
+            height: 500px;
+        }
+        #px_in{
+            /* width: 500px;
+            height: 600px; */
+        }
+        /* =>부모의 크기값과 상관없음 */
+        #per_out{
+            width: 30%;
+            height: 500px;
+        }
+        #per_in{
+            width: 200%;
+            height: 200%;
+        }
+        /* =>기준인 부모의 크기값이 변경되면 나도같이 변경됨 */
+        #vw_out{
+            width: 50vw;
+            height: 50vh;
+        }
+        #vw_in{
+            width: 200vw;
+            height: 50vh;
+        }
+        /* =>부모의 크기값과 상관없음
+        =>기기의 크기값이 기준 */
+    </style>
+</head>
+<body>
+    <div class="out_box" id="px_out">
+        <div class="in_box" id="px_in"></div>
+    </div>
+    <div class="out_box" id="per_out">
+        <div class="in_box" id="per_in"></div>
+    </div>
+    <div class="out_box" id="vw_out">
+        <div class="in_box" id="vw_in"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+@media all and (min-width:1580px){
+/* header가로크기100%
+부모의 100% 크기 일때 가로크기 생략 가능 
+=>float 사용시 확인 필요*/
+.center_align{
+    width: 1280px;
+    margin: 0 auto;
+}
+header{
+    height: 152px;
+    margin-bottom: 20px;
+}
+.mo_menu_wrap{
+    display: none;
+}
+.top_header_wrap{
+    height: 100px;
+    border-bottom: 1px solid #999999;
+    position: relative;
+}
+.main_logo,.search_box,.side_menu_wrap{
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    left: 50%;
+}
+.main_logo{
+    width: 200px;
+    background: rebeccapurple;
+    margin-left: -640px;
+}
+.search_box{
+    width: 200px;
+    background: lawngreen;
+    margin-left: 50px;
+}
+.side_menu_wrap{
+    width: 350px;
+    background: lightcoral;
+    margin-left: 290px;
+}
+.bottom_header_wrap{
+    height: 50px;
+    border-bottom: 1px solid #999999;
+}
+.main_top_menu_wrap{
+    height: 50px;
+    background: lawngreen;
+}
+.top_menu{
+    width: 200px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+}
+.top_menu:last-child{
+    width: 80px;
+}
+.top_section,.top_sec_art,.bottom_section,.bottom_sec_art{
+    overflow: hidden;
+}
+.top_sec_art,.bottom_sec_art{
+    margin-bottom: 20px;
+}
+.top_sec_art_1_left_con{
+    float: left;
+    width: 59.52%;
+    /* 100-0.8(10px여백값)=99.2/5=19.84*3=59.52 */
+    /* 크기가 정해져있을때(762px)
+    762/1280=0.5953125*100=59.53 */
+    height: 320px;
+    background: seagreen;
+}
+.top_sec_art_1_right_con{
+    float: right;
+    width: 39.68%;
+    /* 100-0.8(10px여백값)=99.2/5=19.84*2=39.68 */
+    height: 320px;
+    background: darkblue;
+}
+.top_sec_art_2_left_con{
+    width: 79.36%;
+    float: left;
+    height: 200px;
+    background: lightcoral;
+}
+.top_sec_art_2_right_con{
+    float: right;
+    width: 19.84%;
+    height: 200px;
+    background: lightsalmon;
+}
+.label_wrap{
+    width: 400px;
+    height: 50px;
+    float: left;
+    background: blue;
+}
+.arrow_but_wrap{
+    width: 200px;
+    height: 50px;
+    float: right;
+    background: sienna;
+}
+.tab_con_wrap{
+    width: 100%;
+    height: 250px;
+    background: lightblue;
+    float: left;
+    margin-top: 20px;
+}
+.top_sec_art_4_left_con,.top_sec_art_4_right_con{
+    width: 49.6%;
+    height: 250px;
+    float: left;
+    background: springgreen;
+}
+.top_sec_art_4_right_con{
+    float: right;
+    background: mediumslateblue;
+}
+.bottom_section{
+    background: grey;
+    padding-top: 20px;
+}
+.bottom_sec_art_1_left_con,.bottom_sec_art_1_right_con{
+    width: 49.6%;
+    height: 500px;
+    float: left;
+    background: lightseagreen;
+}
+.bottom_sec_art_1_right_con{
+    float: right;
+    background: khaki;
+}
+.th_con_align{
+    width: 32.8%;
+    float: left;
+    margin-right: 0.8%;
+    background: palegreen;
+}
+.th_con_align:last-child{
+    margin-right: 0;
+}
+.bottom_sec_art:nth-child(2)>.th_con_align{
+    height: 300px;
+}
+.bottom_sec_art:nth-child(3)>.th_con_align{
+    height: 600px;
+}
+footer{
+    height: 200px;
+    background: chocolate;
+}
+
+
+
+
+
+
+}/* 닫히는 부분 지우지마라 */

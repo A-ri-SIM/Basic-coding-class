@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .out_box{
+            width: 400px;
+            /* height: 500px; */
+            border: 10px solid black;
+            margin: 100px auto;
+            overflow: hidden;
+            /* =>부모의 영역크기보다 자식이 클 때
+            1.부모보다 큰 자식 영역 자르기(mask)
+            -부모크기값 설정 후 overflow:hidden
+            2.부모가 큰 자식 영역 맞춤
+            -부모의 가로크기는 생략하면 적용안됨
+            -부모의 세로크기는 생략 후 overflow:hidden
+            =>부모의 높이값이 자식영역에 맞추어짐  */
+        }
+        .in_box{
+            width: 800px;
+            height: 800px;
+            background: salmon;
+            border: 10px solid blue;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="out_box">
+        <div class="in_box">
+            1
+        </div>
+    </div>
+</body>
+</html>

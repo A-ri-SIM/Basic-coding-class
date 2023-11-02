@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>제에에목</title>
+		<style>
+			.out_box{
+				width: 680px;
+				height: 340px
+				border: 2px solid black;
+				position: relative;
+			}
+			.in_box_1{
+				width: 200px;
+				height: 300px;
+				background:magenta;
+				margin: 20px
+				float: left;
+			}
+			.in_box_2{
+				widht:200px;
+				height: 100px;
+				background:magenta;
+				posotion: absolute;
+				top: 0;
+				left: 0;
+			}
+			.in_box_2:nth-child(2){
+				bottom:0;
+				left:50%;
+				margin-left: -100px;
+			}
+			.in_box_2:last-child{
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="out_box">
+			<div class="in_box_1"></div>
+			<div class="in_box_1"></div>
+			<div class="in_box_1"></div>
+		</div>
+		<div class="out_box">
+			<div class="in_box_2"></div>
+			<div class="in_box_2"></div>
+			<div class="in_box_2"></div>
+		</div>
+	</body>
+</html>

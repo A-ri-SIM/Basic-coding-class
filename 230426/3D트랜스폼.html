@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* .out_box{
+            width: 400px;
+            height: 400px;
+            border: 10px solid black;
+            margin: 200ㅔㅌ auto;
+        }
+        .in_box{
+            width: 400px;
+            height: 400px;
+            background: red;
+            transform: rotate(45deg);
+            /* transform-origin: 0 100%; */
+            /* =>객체의 중심점
+            왼쪽 상단 부터 0,0 오른쪽 상단 100%,0
+            왼쪽 하단 0,100% 오른쪽 하단 100%,100%
+            사이의 위치값은 %값으로 확인 */
+            /* transform-origin: left top;
+            left top : 왼쪽 상단
+            left bottom : 왼쪽 하단
+            right top : 오른쪽 상단
+            right bottom : 오른쪽 하단 */
+        /* } */ 
+
+        .box{
+            width: 300px;
+            height: 300px;
+            background: gray;
+            position: relative;
+            margin: 100px auto;
+            animation-name: ro_box;
+            animation-duration: 5s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            /* 3D 뒤 영역 보임 설정 */
+            perspective: 0px;
+            /* =>원근감 */
+        }
+        .num_box{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 100px;
+            text-align: center;
+            line-height: 300px;
+            opacity: 0.5;
+        }
+        .num_1{
+            background: lightblue;
+            transform: rotateY(0deg) translate3d(0,0,150px);
+        }
+        .num_2{
+            background: lightcoral;
+            transform: rotateY(90deg) translate3d(0,0,150px);
+        }
+        .num_3{
+            background: lightcyan;
+            transform: rotateY(180deg) translate3d(0,0,150px);
+        }
+        .num_4{
+            background: lightgoldenrodyellow;
+            transform: rotateY(270deg) translate3d(0,0,150px);
+        }
+        .num_5{
+            background: lightgreen;
+            transform: rotateX(90deg) translate3d(0,0,150px);
+        }
+        .num_6{
+            background: lightpink;
+            transform: rotateX(270deg) translate3d(0,0,150px);
+        }
+        .box:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes ro_box{
+            from{
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+                perspective: 1000px;
+            }
+            to{
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+                perspective: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="out_box">
+        <div class="in_box">
+            <h1>방향확인</h1>
+        </div>
+    </div> -->
+    <div class="box">
+        <div class="num_box num_1">1</div>
+        <div class="num_box num_2">2</div>
+        <div class="num_box num_3">3</div>
+        <div class="num_box num_4">4</div>
+        <div class="num_box num_5">5</div>
+        <div class="num_box num_6">6</div>
+    </div>
+</body>
+</html>

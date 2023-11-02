@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".out_box").css({
+                width:810,
+                height:410,
+                border:"5px solid black",
+                padding: 50,
+                boxSizing:"border-box"
+            } )
+            $(".in_box").css({
+                width:200,
+                height:300,
+                float:"left",
+                border:"5px solid black",
+                boxSizing:"border-box"
+            })
+            $(".in_box:nth-child(2)").css({
+                marginLeft:50,
+                marginRight:50
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="out_box">
+        <div class="in_box"></div>
+        <div class="in_box"></div>
+        <div class="in_box"></div>
+    </div>
+</body>
+</html>

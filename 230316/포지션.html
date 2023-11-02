@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        height: 2000px;
+    }
+    #out_box{
+        width: 1000px;
+        height: 400px;
+        border: 10px solid black;
+        font-size: 100px;
+        text-align: center;
+        /* position: fixed; */
+        margin: 50px auto;
+        position: relative;
+        /* top: 0;
+        left: 100; */
+        /* position: absolute;
+        top: 0;
+        left: 0; */
+    }
+    .in_box{
+        width: 300px;
+        height: 300px;
+        border: 10px solid red;
+        box-sizing: border-box;
+        background: rebeccapurple;
+        line-height: 300px;
+        position: absolute;
+        /* top: 0;
+        left: 0; */
+        }
+    .in_box:nth-child(1){
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+    .in_box:nth-child(2){
+        /* margin-left: -100px;
+        margin-top: -100px; */
+        /* position: fixed; */
+        left: 150px;
+        top: 50px;
+        z-index: 2;
+    }
+    .in_box:nth-child(3){
+        top: 100px;
+        left: 300px;
+        z-index: 1;
+    }
+
+
+
+    /* position 값
+    =>좌표값
+    1.fixed=>윈도우의 왼쪽 상단 0,0
+    2.relactive=>나의 왼쪽 상단 0,0
+    3.absolute
+    =>부모의 왼쪽 상단 0,0
+    => 부모값에 position지정되어있어야함 */
+    /* left,right =>X축
+    top,bottom =>Y축
+    z-index => Z축(레이어순서) */
+
+   
+</style>
+
+</head>
+<body>
+    <div id="out_box">
+        <div class="in_box">1</div>
+        <div class="in_box">2</div>
+        <div class="in_box">3</div>
+    </div> 
+
+
+</body>
+</html>

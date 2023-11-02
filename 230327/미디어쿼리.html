@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 미디어쿼리
+        =>윈도우의 크기를 이식하는 조건문
+        and : A and B => A도 참, B도 참일때 실행(주로 사용)
+        or : A or B =>A 또는 B 둘 중 참이면 실행
+        
+        =>기기를 인식
+        화면이 있는 기기 : screen
+        인쇄장치 : print
+        음성과 영상이 동시 출력되는 기기 : tv
+        음성 합성 장치 : aural
+        점자 표지 장치 : braille
+        손에 들고다니는 장치 : handheld
+        프로젝터 : projection
+        화면 없는 장치 : tty
+        전체기기 : all
+        
+        =>기기의 크기를 인식
+        width : 웹문서의 가로크기
+        height : 웹문서의 세로크기
+        -min : 최소, max : 최대
+        =>device-width : 기기의 가로크기
+        =>device-height : 기기의 세로크기
+       
+        =>기기의 화면 방향을 인식
+         landscape(가로),portrait(세로)
+         aspect-ratio(화면비율)
+         - orientation
+
+        =>기기의 해상도 인식
+        resolution 기기의 해상도
+
+        =>기기의 비트수 인식
+        color 기기의 비트수
+        color-index 기기의 색상수 */
+        
+        /* @media 기기명칭 and/or (조건삽입) and/or (조건삽입){
+            조건이 만족하면 실행이 되는 스타일 지정
+        } */
+        /* 1200이상화면 */
+        @media all and (min-width:1200px){
+            #wrap{
+                width: 1200px;
+                height: 500px;
+                background: blue;
+                margin: 0 auto;
+            }
+        }
+        /* 1199~960화면까지  */
+        @media all and (max-width:1199px) and (min-width:960px){
+            #wrap{
+                width: 960px;
+                height: 500px;
+                background: red;
+                margin: 0 auto;
+            }
+        }
+        /* 959~360 */
+        @media all and (max-width:959px) and (min-width:360px){
+            #wrap{
+                width: 360px;
+                height: 500px;
+                background: yellow;
+                margin: 0 auto;
+            }
+        }
+        /* 359이하 화면 */
+        @media all and (max-width:359px){
+            #wrap{
+                width: 100%;
+                height: 500px;
+                background: green;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+</body>
+</html>

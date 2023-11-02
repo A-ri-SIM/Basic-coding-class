@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 30px;
+        }
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            // new Date();
+            // =>현재 날짜,시간에 대한 모든 정보 가져오기
+            // let now=new Date();
+            // $("p").eq(0).text(now);
+            // // new Date().getFullYear();
+            // // =>년도에해당하는 정보만 가져오기
+            // let year=now.getFullYear();
+            // $("p").eq(1).text(year);
+            // // new Date().getMonth()
+            // // =>월에 해당하는 정보만 가져오기
+            // let month=now.getMonth();
+            // $("p").eq(2).text(month);
+            // // new Date().getMonth()+1;
+            // // =>0월부터시작,+1추가
+            // let month_1=now.getMonth()+1;
+            // $("p").eq(3).text(month_1);
+            // // new Date().getDate()
+            // // =>일에 해당하는 정보만 가져오기
+            // let date=now.getDate();
+            // $("p").eq(4).text(date);
+            // // new Date().getDay()
+            // // =>요일에 해당하는 정보만 가져오기
+            // let day=now.getDay();
+            // $("p").eq(5).text(day);
+            // // new Date().getHours()
+            // // =>시에 해당하는 정보만 가져오기
+            // let hours=now.getHours();
+            // $("p").eq(6).text(hours);
+            // // new Date().getMinutes()
+            // // =>분에 해당하는 정보만 가져오기
+            // let minutes=now.getMinutes();
+            // $("p").eq(7).text(minutes);
+            // // new Date().getSeconds()
+            // // =>초에 해당하는 정보만 가져오기
+            // let seconds=now.getSeconds();
+            // $("p").eq(8).text(seconds);
+            let days=["일","월","화","수","목","금","토"]
+            let today= setInterval(function(){
+                let now=new Date();
+                let year=now.getFullYear();
+                let month=now.getMonth()+1;
+                let date=now.getDate();
+                let day=now.getDay();
+                let hours=now.getHours();
+                let minutes=now.getMinutes();
+                let seconds=now.getSeconds();
+                $(".time_box>span").eq(0).text(year);
+                $(".time_box>span").eq(1).text(month);
+                $(".time_box>span").eq(2).text(date);
+                $(".time_box>span").eq(3).text(days[day]);
+                $(".time_box>span").eq(4).text(hours);
+                $(".time_box>span").eq(5).text(minutes);
+                $(".time_box>span").eq(6).text(seconds);
+            });
+           
+
+
+
+
+        });//끝
+    </script>
+</head>
+<body>
+    <!-- <p></p> -->
+    <!-- <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p> -->
+    <div class="time_box">
+        <span>00</span>년<span>00</span>월<span>00</span>일<span>00</span>요일<br>
+        <span>00</span>시<span>00</span>분<span>00</span>초
+    </div>
+
+</body>
+</html>

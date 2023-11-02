@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.초기화
+        -여백없애기 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* a태그의 기본 스타일 없애기 */
+        a{
+            color: #333333;
+            text-decoration: none;
+        }
+        /* 1.세로메뉴 
+         가로메뉴 병경시 menu_wrap에서 가로세로값 변경
+         300->1500
+         500->100
+         top_menu에서 float:left 추가
+         */
+        #menu_wrap{
+            width: 1500px;
+            height: 100px;
+            border: 10px solid black;
+            margin: 0 auto;
+        
+        }
+        .top_menu{
+            width: 300px;
+            height: 100px;
+            background: navy;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            line-height: 100px;
+            border-right: 1px solid white;
+            box-sizing: border-box;
+            float: left;
+            /* =>텍스트 속성은 부모에게 물려받음 */
+        }
+        .top_menu:last-child{
+            border-right: 0;
+        }
+        /* a태그 작업시 주의점
+        -텍스트 색상은 부모태그의 속성을 물려받지 않음 */
+        .top_menu>a{
+            color: white;
+        }
+        /* 추가선택자
+        => 자손 선택자
+        -자식안에 있는 자손을 선택할때
+        -자손에는 자식이 포함 */
+        /* #menu_wrap a{} */
+        /* =>부모의 부모선택 자손선택
+        =>자손개념: 안에 자식포함 */
+        /* #menu_wrap .top_menu{} */
+        /* 메뉴 활성화 표시 */
+        /* 객체선택:hover{
+            객체에 마우스를 올렸을때 보여지는 스타일 지정
+        } */
+        .top_menu:hover{
+            background: red;
+            cursor: pointer;
+            
+        }
+        /* - .top_menu에 마우스를 올리면 안에 있는 a태그의 텍스트 색상 노란색변경 */
+        .top_menu:hover>a{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu_wrap">
+        <div class="top_menu">
+            <a href="#">상위메뉴1</a>
+        </div>
+        <div class="top_menu">
+            <a href="#">상위메뉴2</a>
+        </div>
+        <div class="top_menu">
+            <a href="#">상위메뉴3</a>
+        </div>
+        <div class="top_menu">
+            <a href="#">상위메뉴4</a>
+        </div>
+        <div class="top_menu">
+            <a href="#">상위메뉴5</a>
+        </div>
+    </div>
+    
+</body>
+</html>

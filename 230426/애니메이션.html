@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 애니메이션 */
+        /* 1.키프레임으로 애니메이션의 움직임 제어
+        2.애니메이션 적용객체에 키플레임명을 삽입
+        3.반복값,가속도 형태,방향값,정지,플레이 */
+        .out_box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50px;
+            animation-name: move_box;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in;
+        }
+        .out_box:hover{
+            animation-play-state: paused;
+        }
+        @keyframes move_box{
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(1000px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="out_box">
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            /* float: left */
+            /* => 가로정렬 지정 속성 
+            => float: left, right(순서확인)*/
+            
+        }
+        #first{
+            background-color: red;
+            /* float: right; */
+        }
+        #second{
+            background-color: blue;
+            /* float: right; */
+        }
+        #third{
+            background-color: green;
+            /* float: right; */
+        }
+
+
+        #out_box{
+            width: 900px;
+            height: 300px;
+            border: 10px solid black;
+            float:right;
+            /* => 오른쪽으로 위치 설정 */
+        
+        }
+        .box{
+            background-color: chocolate;
+            border: 10px solid rgb(196, 254, 4);
+            box-sizing: border-box; 
+            float: left;
+            /* => 왼쪽으로 위치 설정
+            => 부모안에서 왼쪽으로 위치가 들어가서 가로정렬이 되는 것처럼 보이는 것
+            => 내가 float이면 내 형제는 모두 float임 */
+        }
+        #box_1{
+            background-color: red;
+        }
+        #box_2{
+            background-color: blue;
+        }
+        #box_3{
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div id="first">1</div>
+    <div id="second">2</div>
+    <div id="third">3</div> -->
+    <div id="out_box">
+        <div class="box" id="box_1">1</div>
+        <div class="box" id="box_2">2</div>
+        <div class="box" id="box_3">3</div>
+    </div>
+
+
+
+</body>
+</html>

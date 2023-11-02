@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 이벤트
+            // 마우스이벤트
+            // - click : 객체를 눌렸다 뗐을때
+            // - dbclick : 연속적으로 객체를 눌렷다 2번째 뗏을때
+            // - mousedown : 객체를 눌렸을때
+            // - mouseup : 뗏을때
+            // - mouseover : 객체에 마우스를 올렸을때
+            // - mouseout : 객체에 마우스가 벗어났을때
+            // - mouseenter : 마우스가 객체의 영역으로 들어갔을때
+            // - mouseleave : 마우스가 객체의 영역에서 벗어났을때
+            // - mousemove : 마우스가 움직일때
+            // - hover : mouseenter + mouseleave 
+
+            // 이벤트 연결하기
+            // $(이벤트객체:마우스로 제어하는 객체).on({
+            //     이벤트명 : function(){이벤트발생식},
+            //     이벤트명 : function(){이벤트발생식},
+            // });
+            // $(객체).이벤트명(function(){
+            //     이벤트발생식
+            // });
+            // $(".box").css({
+            //     width:300,
+            //     height:300,
+            //     background:"red",
+            //     margin:30
+            // }).on({
+            //     click:function(){
+            //         // $(".box").css({
+            //         //     background:"blue"
+            //         // })
+            //         // this => 이벤트 적용 영역
+            //         $(this).css({
+            //         background:"blue"
+            //     });
+            //     }
+            //     });
+            // $(".box").css({
+            //     width:300,
+            //     height:300,
+            //     background:"red",
+            //     margin:30
+            // }).click(function(){
+            //     $(this).css({
+            //         background:"green"
+            //     })
+            // })
+            // let a=0;
+            // $(".box").css({
+            //     width:300,
+            //     height:300,
+            //     background:"red",
+            //     margin:30
+            // }).click(function(){
+            //     if(a==0){
+            //         $(this).css({
+            //             background:"blue"
+            //         });
+            //         a++;
+            //     }else{
+            //         $(this).css({
+            //             background:"red"
+            //         });
+            //         a--;
+            //     }
+            //     })
+
+            // let a=0;
+            // $(".box").css({
+            //     width:300,
+            //     height:300,
+            //     background:"red",
+            //     margin:30
+            // }).click(function(){
+            //     if(a==0){
+            //         $(this).css({
+            //             background:"blue"
+            //         });
+            //         a++;
+            //     }else if(a==1){
+            //         $(this).css({
+            //             background:"yellow"
+            //         });
+            //         a++;
+            //     }else if(a==2){
+            //         $(this).css({
+            //             background:"green"
+            //         });
+            //         a++;
+            //     }else{
+            //         $(this).css({
+            //             background:"red"
+            //         });
+            //         a-=3;
+            //     }
+            //     })
+            // let a=0
+            // $("img").click(function(){
+            //     if(a==0){
+            //         $(this).attr({
+            //             src:"img/open.png"
+            //         });
+            //         a++;
+            //     }else{
+            //         $(this).attr({
+            //             src:"img/close.png"
+            //         });
+            //         a--;
+            //     }
+            // });
+
+            let img_name="close";
+            $("img").click(function(){
+                if(img_name=="close"){
+                    $(this).attr({
+                        src:"img/close.png"
+                    })
+                    img_name="open";
+                }else{
+                    $(this).attr({
+                        src:"img/open.png"
+                    })
+                    img_name="close";
+                }
+                
+            })
+            
+            
+
+        
+        
+        
+        
+        });
+    </script>
+</head>
+<body>
+    <img src="img/close.png">
+    <!-- <div class="box"></div> -->
+    <!-- <div class="box"></div> -->
+</body>
+</html>

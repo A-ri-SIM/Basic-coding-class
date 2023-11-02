@@ -1,0 +1,143 @@
+/* 1. 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 1200px;
+    height: 100px;
+    background: gold;
+    margin: 0 auto;
+    position: relative;
+}
+/* h1{
+    width: 200px;
+    height: 80px;
+    background: white;
+    border: 5px solid black;
+    box-sizing: border-box;
+    float: left;
+    margin: 10px;
+}
+nav{
+    width: 700px;
+    height: 80px;
+    background: white;
+    border: 5px solid black;
+    box-sizing: border-box;
+    float: left;
+    margin: 10px 25px;
+}
+div{
+    width: 200px;
+    height: 80px;
+    background: white;
+    border: 5px solid black;
+    box-sizing: border-box;
+    float: left;
+    margin: 10px;
+ } */
+
+/* => 쌤 해석 */
+/* 추가 선택자 */
+/* #logo,nav,header>div{
+    height: 50px;
+    float: left;
+    margin-top: 25px;
+}
+
+#logo{
+ width: 150px;
+ background: aqua;  
+ margin-left: 20px;
+ float: left; 
+}
+nav{
+    width: 500px;
+    background-color: khaki;
+    float: left;
+    margin-left: 180px;
+    (1200-500=700/2=350-150-20=180)
+}
+header>div{
+    width: 200px;
+    background: darkcyan;
+    margin-left: 140px;
+    margin-right: 10px;
+    float: right;
+} */
+
+/* position으로 위치설정 */
+#logo,nav,header>div{
+    height: 50px;
+    position: absolute;
+    top: 25px;
+    background: blue;
+}
+#logo{
+    width: 150px;
+    left: 20px;
+}
+nav{
+    width: 500px;
+    /* left: 350px; */
+/* 포지션 사용시 가로 중앙 세로 중앙 공식 */
+left:50%;
+margin-left: -250px;
+/* 포지션 가로 중앙 정렬
+left: 50%;
+margin-left:-나의 가로값/2 */
+/* 포지션 세로 중앙 정렬
+top:50%;
+margin-top:-나의 높이값/2 */
+}
+header>div{
+    width: 200px;
+    right: 20px;
+}
+
+section{
+    width: 800px;
+    height: 900px;
+    background: green;
+    margin: 50px auto;
+    padding: 25px;
+    box-sizing: border-box;
+    
+}
+article{
+    width: 750px;
+    height: 270px;
+    background: yellow;
+    margin-bottom: 20px;
+}
+.box_1{
+    width: 300px;
+    height: 200px;
+    background: fuchsia;
+    margin-top: 30px;
+}
+.box_1:first-child{
+    float: left;
+    margin-left: 20px;
+}
+
+.box_1:last-child{
+    float: right;
+    margin-right: 20px;
+}
+.box_2{
+    width: 200px;
+    height: 200px;
+    background: greenyellow;
+    float: left;
+    margin-top: 35px;
+    margin-left: 37.5px;
+}
+
+footer{
+    width: 1200px;
+    height: 200px;
+    background: gray;
+    margin: 0 auto;
+}

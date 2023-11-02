@@ -1,0 +1,117 @@
+@media all and (max-width:1079px){
+    .center_align{
+        width: 98%;
+        margin: 0 auto;
+    }
+    header{
+        height: 80px;
+        margin-bottom: 20px;
+    }
+    .top_header_wrap,.bottom_header_wrap{
+       display: none;
+    }
+    .mo_menu_wrap{
+        height: 80px;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    
+    .main_logo{
+        width: 200px;
+        height: 50px;
+        background: rebeccapurple;
+        margin: 0 auto;
+    }
+    .toggle_menu_wrap{
+        width: 50px;
+        height: 50px;
+        float: right;
+        margin-top: -50px;
+        background: blue;
+    }
+    
+    .top_section,.top_sec_art,.bottom_section,.bottom_sec_art{
+        overflow: hidden;
+    }
+    .top_sec_art,.bottom_sec_art{
+        margin-bottom: 20px;
+    }
+    .top_sec_art_1_left_con{
+        width: 100%;
+        height: 320px;
+        background: seagreen;
+        margin-bottom: 20px;
+    }
+    .top_sec_art_1_right_con{
+        width: 100%;
+        height: 250px;
+        background: darkblue;
+        margin-bottom: 20px;
+    }
+    .top_sec_art_2_left_con,.top_sec_art_2_right_con{
+        display: none;
+    }
+    .label_wrap{
+        width: 400px;
+        height: 50px;
+        float: left;
+        background: blue;
+    }
+    .arrow_but_wrap{
+       display: none;
+    }
+    .tab_con_wrap{
+        width: 100%;
+        height: 250px;
+        background: lightblue;
+        float: left;
+        margin-top: 20px;
+    }
+    .top_sec_art_4_left_con,.top_sec_art_4_right_con{
+        width: 100%;
+        height: 250px;
+        background: springgreen;
+        margin-bottom: 20px;
+    }
+    
+    .top_sec_art_4_right_con{
+        background: mediumslateblue;
+    } 
+    .bottom_section{
+        background: grey;
+        padding-top: 20px;
+    }
+    .bottom_sec_art_1_left_con,.bottom_sec_art_1_right_con{
+        width: 100%;
+        height: 500px;
+        background: lightseagreen;
+    }
+    .bottom_sec_art_1_right_con{
+        background: khaki;
+        margin-top: 20px;
+    }
+    .th_con_align{
+        width: 100%;
+        background: palegreen;
+        margin-bottom: 20px;
+    }
+    .bottom_sec_art:nth-child(2)>.bottom_sec_art_2_left_con{
+        display: none;
+    }
+    .bottom_sec_art:nth-child(2)>.th_con_align{
+        height: 300px;
+    }
+    .bottom_sec_art:nth-child(3)>.th_con_align{
+        height: 600px;
+    }
+    footer{
+        height: 200px;
+        background: chocolate;
+    }
+    
+    
+    
+    
+    
+    
+    }/* 닫히는 부분 지우지마라 */

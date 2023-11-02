@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            width: 200px;
+            height: 100px;
+            margin-bottom: 20px;
+            background: rebeccapurple;
+        }
+    </style>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            // let a=10;
+            // document.write(a);
+            // 경고창출력
+            // alert(a+"문자출력");
+            //콘솔출력
+            // console.log(a+"문자출력");
+            // eq(index순서값)
+            // =>태그의 위치를 index 순서값으로 선택하는 명령
+            // index();
+            // =>태그릐 index값을 활용할 수 있도록 함
+            // let index_num=$(선택자).index();
+            // =>선택한 객체의 index값을 변수에 저장,활용가능
+            // li클릭하면 클릭한 li 인텍스값을 경고창 출력
+            // $("li").click(function(){
+            //     let index_num=$(this).index();
+            //     alert(index_num);
+            // })
+            // 크기값
+            // let 변수=$(선택자).width();
+            // let 변수=$(선택자).height();
+            let a=1
+            $("li").click(function(){
+                let li_width=$(this).width();
+                if(a==1){
+                    $(this).animate({
+                    width:li_width*2
+                    },500)
+                    a++;
+                }else{
+                    $(this).animate({
+                    width:li_width/2
+                    },500)
+                    a--;
+                }
+                
+                // alert(li_width+li_width);
+            });
+
+
+        });//끝
+    </script>
+</head>
+<body>
+    <ul>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</body>
+</html>
